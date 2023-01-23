@@ -1,0 +1,4 @@
+baseURL = 'https://aspectsides.github.io'
+languageCode = 'en-us'
+title = "Aspect's Website"
+theme = 'ananke'
