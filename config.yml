@@ -119,9 +119,9 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
-    - identifier: categories
-      name: categories
-      url: /categories/
+    - identifier: gemini
+      name: Gemini
+      url: gemini://tilde.club/~aspect
       weight: 10
     - identifier: tags
       name: tags
