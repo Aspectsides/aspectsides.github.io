@@ -1,7 +1,7 @@
 ---
 title: "Catppuccin"
 date: 2023-01-22T23:20:06-08:00
-draft: true
+draft: false
 ---
 # Catppuccin: My Favorite Colorscheme
 
