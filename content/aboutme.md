@@ -11,3 +11,5 @@ Hey. My name is Daniel, and I'm a C++ dev and firmly believe in Emacs supremacy 
 I also play Overwatch from time to time.
 
 Contact me [here](https://keyoxide.org/28AAD1A6FEA3CC1CC5D51B4BD1AA1A860CE883C4).
+
+I also have a Gemini space over at gemini://tilde.club/~aspect. Go check it out if you want.
