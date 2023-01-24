@@ -78,16 +78,20 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog
+    Title: "Hey."
+    Content: Welcome to my personal website. This website is meant to be a digital garden, in which I dump all my thoughts and write random articles about whatever comes to mind. Thanks for stopping by!
 
   socialIcons:
-    - name: fediverse
+    - name: mastodon
       url: "https://tilde.zone/@aspect"
     - name: stackoverflow
       url: "https://stackoverflow.com/users/21064109/aspectsides"
     - name: github
       url: "https://github.com/aspectsides"
+    - name: ycombinator
+      url: "https://news.ycombinator.com/user?id=aspectsides"
+    - name: steam
+      url: "https://steamcommunity.com/profiles/76561199134924516/"
 
   analytics:
     google:
@@ -123,13 +127,13 @@ menu:
       name: Gemini
       url: gemini://tilde.club/~aspect
       weight: 10
-    - identifier: tags
-      name: tags
-      url: /tags/
+    - identifier: archive
+      name: archive
+      url: /archives/
       weight: 20
-    - identifier: example
-      name: example.org
-      url: https://example.org
+    - identifier: search
+      name: search
+      url: /search/
       weight: 30
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
@@ -141,3 +145,9 @@ markup:
     # guessSyntax: true
     # lineNos: true
     # style: monokai
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary
