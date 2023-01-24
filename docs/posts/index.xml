@@ -9,7 +9,16 @@
       <link>https://aspectsides.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 23 Jan 2023 17:05:17 -0800</lastBuildDate><atom:link href="https://aspectsides.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Jan 2023 23:59:31 -0800</lastBuildDate><atom:link href="https://aspectsides.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Org Roam</title>
+      <link>https://aspectsides.github.io/posts/orgroam/</link>
+      <pubDate>Mon, 23 Jan 2023 23:59:31 -0800</pubDate>
+      
+      <guid>https://aspectsides.github.io/posts/orgroam/</guid>
+      <description>Org Roam; The New best Notetaking Software for the Zettelkasten method Why not Obsidian? or Vimwiki? I have hopped notetaking software more times than I can count. When I first had the need to take notes, I did them in Google Docs and saved them to Google Drive. This was terrible, and I have no idea what by 13 year old self was doing. When I got slightly older and wiser, I discovered Evernote and transitioned over to that.</description>
+    </item>
+    
     <item>
       <title>Why I Use Arch Linux</title>
       <link>https://aspectsides.github.io/posts/whyiusearch/</link>
