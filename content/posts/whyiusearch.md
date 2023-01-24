@@ -1,7 +1,7 @@
 ---
 title: "Why I Use Arch Linux"
 date: 2023-01-23T17:05:17-08:00
-draft: true
+draft: false
 ---
 # 5 Reasons why Arch Linux is the Best Linux Distribution
 
