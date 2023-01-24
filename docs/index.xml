@@ -9,7 +9,27 @@
       <link>https://aspectsides.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 22 Jan 2023 23:43:35 -0800</lastBuildDate><atom:link href="https://aspectsides.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Jan 2023 16:20:00 -0800</lastBuildDate><atom:link href="https://aspectsides.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About Me</title>
+      <link>https://aspectsides.github.io/aboutme/</link>
+      <pubDate>Mon, 23 Jan 2023 16:22:46 -0800</pubDate>
+      
+      <guid>https://aspectsides.github.io/aboutme/</guid>
+      <description>About Me Hey. My name is Daniel, and I&amp;rsquo;m a C++ dev and firmly believe in Emacs supremacy and am an open source evangalist. I use Arch Linux on a daily basis.
+I also play Overwatch from time to time.
+Contact me here.</description>
+    </item>
+    
+    <item>
+      <title>How I installed Arch Linux on an M1 Macbook Air</title>
+      <link>https://aspectsides.github.io/posts/asahilinux/</link>
+      <pubDate>Mon, 23 Jan 2023 16:20:00 -0800</pubDate>
+      
+      <guid>https://aspectsides.github.io/posts/asahilinux/</guid>
+      <description>How I installed Arch Linux on an M1 Macbook Air What is Asahi Linux? Asahi Linux is an Arch-Based distribution of Linux that is specifically designed for use on MacBooks with Apple Silicon processors. It is, weirdly enough, faster than MacOS on the same hardware. As someone who&amp;rsquo;s only computer is an M1 MacBook Air, I have long been looking for something like this. I installed Asahi back in May of 2022, and it was not a great experience, mainly because of the inability to suspend the system and the lack of GPU drivers, which made it impossible to change the brightness.</description>
+    </item>
+    
     <item>
       <title>Vimwiki</title>
       <link>https://aspectsides.github.io/posts/vimwiki/</link>

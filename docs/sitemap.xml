@@ -2,11 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://aspectsides.github.io/aboutme/</loc>
+    <lastmod>2023-01-23T16:22:46-08:00</lastmod>
+  </url><url>
     <loc>https://aspectsides.github.io/</loc>
-    <lastmod>2023-01-22T23:43:35-08:00</lastmod>
+    <lastmod>2023-01-23T16:20:00-08:00</lastmod>
+  </url><url>
+    <loc>https://aspectsides.github.io/posts/asahilinux/</loc>
+    <lastmod>2023-01-23T16:20:00-08:00</lastmod>
   </url><url>
     <loc>https://aspectsides.github.io/posts/</loc>
-    <lastmod>2023-01-22T23:43:35-08:00</lastmod>
+    <lastmod>2023-01-23T16:20:00-08:00</lastmod>
   </url><url>
     <loc>https://aspectsides.github.io/posts/vimwiki/</loc>
     <lastmod>2023-01-22T23:43:35-08:00</lastmod>
