@@ -9,7 +9,17 @@
       <link>https://aspectsides.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 23 Jan 2023 23:59:31 -0800</lastBuildDate><atom:link href="https://aspectsides.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 28 Jan 2023 12:45:41 -0800</lastBuildDate><atom:link href="https://aspectsides.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting up Neovim for Editing LaTeX</title>
+      <link>https://aspectsides.github.io/posts/notes-1/</link>
+      <pubDate>Sat, 28 Jan 2023 12:45:41 -0800</pubDate>
+      
+      <guid>https://aspectsides.github.io/posts/notes-1/</guid>
+      <description>This is the first article in a three part series in which I discuss how I write math notes with LaTeX and Neovim.
+Why I Started Using LaTeX One thing I&amp;rsquo;ve always recognized about myself is that I have terrible handwriting. Problem is, I&amp;rsquo;m a math major. I kinda need to be able to read my lecture notes later so I don&amp;rsquo;t fail the class. That&amp;rsquo;s when I discovered this blog post by Gilles Castel.</description>
+    </item>
+    
     <item>
       <title>Org Roam</title>
       <link>https://aspectsides.github.io/posts/orgroam/</link>
