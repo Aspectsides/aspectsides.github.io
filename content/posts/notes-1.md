@@ -14,7 +14,7 @@ This is the first article in a three part series in which I discuss how I write 
 
   Here is what my screen looks like when I'm writing LaTeX notes: 
   
-  ![Latex](/static/latex1.png)
+  ![Latex](/latex1.png)
   
   The window on the left is Neovim configured with a few plugins that enhance the LaTeX experience. The window on the left is Zathura, my PDF reader that updates whenever I recompile my LaTeX file by saving it.
   
