@@ -79,7 +79,7 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "Hey."
-    Content: Welcome to my personal website. This website is meant to be a digital garden, in which I dump all my thoughts and write random articles about whatever comes to mind. Thanks for stopping by!
+    Content: I go on rants here. 
 
   socialIcons:
     - name: mastodon
