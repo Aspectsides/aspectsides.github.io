@@ -30,24 +30,6 @@ Why I Started Using LaTeX One thing I&amp;rsquo;ve always recognized about mysel
     </item>
     
     <item>
-      <title>Why I Use Arch Linux</title>
-      <link>https://aspectsides.github.io/posts/whyiusearch/</link>
-      <pubDate>Mon, 23 Jan 2023 17:05:17 -0800</pubDate>
-      
-      <guid>https://aspectsides.github.io/posts/whyiusearch/</guid>
-      <description>5 Reasons why Arch Linux is the Best Linux Distribution What is Arch Linux? If you&amp;rsquo;ve been using Linux for any amount of time, you&amp;rsquo;ve likely heard of Arch Linux as the elitist&amp;rsquo;s Linux distro. This is due mainly to the fact that Arch used to be so goddamn hard to install. You had to go through all the trouble of installing drivers, a graphical environment and dependencies for said programs all through the TTY, without any graphical installation process to speak of.</description>
-    </item>
-    
-    <item>
-      <title>How I installed Arch Linux on an M1 Macbook Air</title>
-      <link>https://aspectsides.github.io/posts/asahilinux/</link>
-      <pubDate>Mon, 23 Jan 2023 16:20:00 -0800</pubDate>
-      
-      <guid>https://aspectsides.github.io/posts/asahilinux/</guid>
-      <description>How I installed Arch Linux on an M1 Macbook Air What is Asahi Linux? Asahi Linux is an Arch-Based distribution of Linux that is specifically designed for use on MacBooks with Apple Silicon processors. It is, weirdly enough, faster than MacOS on the same hardware. As someone who&amp;rsquo;s only computer is an M1 MacBook Air, I have long been looking for something like this. I installed Asahi back in May of 2022, and it was not a great experience, mainly because of the inability to suspend the system and the lack of GPU drivers, which made it impossible to change the brightness.</description>
-    </item>
-    
-    <item>
       <title>Vimwiki</title>
       <link>https://aspectsides.github.io/posts/vimwiki/</link>
       <pubDate>Sun, 22 Jan 2023 23:43:35 -0800</pubDate>
