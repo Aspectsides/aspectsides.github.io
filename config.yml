@@ -131,11 +131,10 @@ menu:
       name: search
       url: /search/
       weight: 10
-    - identifier: aboutme
-      name: about me
-      url: /aboutme/
+    - identifier: zettelkasten
+      name: digital garden
+      url: garden.onefractal.tech
       weight: 10
-
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
