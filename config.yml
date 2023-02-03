@@ -132,7 +132,7 @@ menu:
       url: /search/
       weight: 10
     - identifier: zettelkasten
-      name: digital garden
+      name: "digital garden"
       url: https://garden.onefractal.tech
       weight: 10
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
