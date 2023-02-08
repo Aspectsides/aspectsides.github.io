@@ -9,7 +9,17 @@
       <link>https://aspectsides.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 28 Jan 2023 12:45:41 -0800</lastBuildDate><atom:link href="https://aspectsides.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Feb 2023 23:06:15 -0800</lastBuildDate><atom:link href="https://aspectsides.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Desktop Icons in AwesomeWM</title>
+      <link>https://aspectsides.github.io/posts/desktop_icons/</link>
+      <pubDate>Tue, 07 Feb 2023 23:06:15 -0800</pubDate>
+      
+      <guid>https://aspectsides.github.io/posts/desktop_icons/</guid>
+      <description>Yes, I know what you&amp;rsquo;re going to say. A Linux user, with desktop icons on his desktop? Blasphemy! And you&amp;rsquo;re right. It is blasphemy. I still do it, though. I mean, it&amp;rsquo;s not like my desktop looks like this.
+That&amp;rsquo;s just wrong. I believe that as long as you put only what you really need on your desktop, it&amp;rsquo;s only slightly blasphemy. This is what my AwesomeWM desktop looks like:</description>
+    </item>
+    
     <item>
       <title>Setting up Neovim for Editing LaTeX</title>
       <link>https://aspectsides.github.io/posts/notes-1/</link>
