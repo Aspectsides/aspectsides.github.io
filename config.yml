@@ -131,9 +131,9 @@ menu:
       name: search
       url: /search/
       weight: 10
-    - identifier: garden
-      name: zettelkasten
-      url: https://garden.onefractal.tech
+    - identifier: tilde
+      name: tilde
+      url: https://aspectsides.tilde.team
       weight: 30
 pygmentsUseClasses: true
 markup:
