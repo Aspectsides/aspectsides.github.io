@@ -9,7 +9,16 @@
       <link>https://aspectsides.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 07 Feb 2023 23:06:15 -0800</lastBuildDate><atom:link href="https://aspectsides.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 23 Feb 2023 09:17:43 -0800</lastBuildDate><atom:link href="https://aspectsides.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Self Hosting Your Own Search Engine</title>
+      <link>https://aspectsides.github.io/posts/searx/</link>
+      <pubDate>Thu, 23 Feb 2023 09:17:43 -0800</pubDate>
+      
+      <guid>https://aspectsides.github.io/posts/searx/</guid>
+      <description>You need to host your own search engine. Why? Because Google, Microsoft, even DuckDuckGo, who has a weird relationship with Microsoft, are all tracking you. In fact, Google itself has said that it stores more than an exabyte of your data. That&amp;rsquo;s kinda creepy. Even though most of us have nothing to hide from Google (right?), we could all do with a bit more privacy. For just ten minutes of your time, and a payment of pocket change every month, you&amp;rsquo;ll be able to host your own search engine, along with a bunch of other stuff which I will cover in future guides.</description>
+    </item>
+    
     <item>
       <title>Desktop Icons in AwesomeWM</title>
       <link>https://aspectsides.github.io/posts/desktop_icons/</link>

@@ -8,6 +8,43 @@
       <url>https://aspectsides.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://aspectsides.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://aspectsides.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 23 Feb 2023 09:17:43 -0800</lastBuildDate><atom:link href="https://aspectsides.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Privacy</title>
+      <link>https://aspectsides.github.io/categories/privacy/</link>
+      <pubDate>Thu, 23 Feb 2023 09:17:43 -0800</pubDate>
+      
+      <guid>https://aspectsides.github.io/categories/privacy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Selfhosting</title>
+      <link>https://aspectsides.github.io/categories/selfhosting/</link>
+      <pubDate>Thu, 23 Feb 2023 09:17:43 -0800</pubDate>
+      
+      <guid>https://aspectsides.github.io/categories/selfhosting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://aspectsides.github.io/categories/linux/</link>
+      <pubDate>Sun, 22 Jan 2023 23:20:06 -0800</pubDate>
+      
+      <guid>https://aspectsides.github.io/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ricing</title>
+      <link>https://aspectsides.github.io/categories/ricing/</link>
+      <pubDate>Sun, 22 Jan 2023 23:20:06 -0800</pubDate>
+      
+      <guid>https://aspectsides.github.io/categories/ricing/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
