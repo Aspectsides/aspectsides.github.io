@@ -2,20 +2,59 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://aspectsides.github.io/</loc>
+    <loc>/</loc>
+    <lastmod>2023-02-23T09:17:43-08:00</lastmod>
+  </url><url>
+    <loc>/categories/</loc>
+    <lastmod>2023-02-23T09:17:43-08:00</lastmod>
+  </url><url>
+    <loc>/posts/</loc>
+    <lastmod>2023-02-23T09:17:43-08:00</lastmod>
+  </url><url>
+    <loc>/categories/privacy/</loc>
+    <lastmod>2023-02-23T09:17:43-08:00</lastmod>
+  </url><url>
+    <loc>/posts/searx/</loc>
+    <lastmod>2023-02-23T09:17:43-08:00</lastmod>
+  </url><url>
+    <loc>/categories/selfhosting/</loc>
+    <lastmod>2023-02-23T09:17:43-08:00</lastmod>
+  </url><url>
+    <loc>/posts/desktop_icons/</loc>
+    <lastmod>2023-02-07T23:06:15-08:00</lastmod>
+  </url><url>
+    <loc>/posts/notes-1/</loc>
+    <lastmod>2023-01-28T12:45:41-08:00</lastmod>
+  </url><url>
+    <loc>/posts/orgroam/</loc>
+    <lastmod>2023-01-23T23:59:31-08:00</lastmod>
+  </url><url>
+    <loc>/about/</loc>
+    <lastmod>2023-01-23T16:22:46-08:00</lastmod>
+  </url><url>
+    <loc>/posts/vimwiki/</loc>
     <lastmod>2023-01-22T23:43:35-08:00</lastmod>
   </url><url>
-    <loc>https://aspectsides.github.io/posts/</loc>
-    <lastmod>2023-01-22T23:43:35-08:00</lastmod>
-  </url><url>
-    <loc>https://aspectsides.github.io/posts/vimwiki/</loc>
-    <lastmod>2023-01-22T23:43:35-08:00</lastmod>
-  </url><url>
-    <loc>https://aspectsides.github.io/posts/catppuccin/</loc>
+    <loc>/tags/catppuccin/</loc>
     <lastmod>2023-01-22T23:20:06-08:00</lastmod>
   </url><url>
-    <loc>https://aspectsides.github.io/categories/</loc>
+    <loc>/posts/catppuccin/</loc>
+    <lastmod>2023-01-22T23:20:06-08:00</lastmod>
   </url><url>
-    <loc>https://aspectsides.github.io/tags/</loc>
+    <loc>/categories/linux/</loc>
+    <lastmod>2023-01-22T23:20:06-08:00</lastmod>
+  </url><url>
+    <loc>/tags/ricing/</loc>
+    <lastmod>2023-01-22T23:20:06-08:00</lastmod>
+  </url><url>
+    <loc>/categories/ricing/</loc>
+    <lastmod>2023-01-22T23:20:06-08:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2023-01-22T23:20:06-08:00</lastmod>
+  </url><url>
+    <loc>/archives/</loc>
+  </url><url>
+    <loc>/search/</loc>
   </url>
 </urlset>

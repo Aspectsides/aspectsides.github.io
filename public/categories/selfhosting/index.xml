@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Selfhosting on Aspect</title>
+    <link>/categories/selfhosting/</link>
+    <description>Recent content in Selfhosting on Aspect</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 23 Feb 2023 09:17:43 -0800</lastBuildDate><atom:link href="/categories/selfhosting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Self Hosting Your Own Search Engine</title>
+      <link>/posts/searx/</link>
+      <pubDate>Thu, 23 Feb 2023 09:17:43 -0800</pubDate>
+      
+      <guid>/posts/searx/</guid>
+      <description>You need to host your own search engine. Why? Because Google, Microsoft, even DuckDuckGo, who has a weird relationship with Microsoft, are all tracking you. In fact, Google itself has said that it stores more than an exabyte of your data. That&amp;rsquo;s kinda creepy. Even though most of us have nothing to hide from Google (right?), we could all do with a bit more privacy. For just ten minutes of your time, and a payment of pocket change every month, you&amp;rsquo;ll be able to host your own search engine, along with a bunch of other stuff which I will cover in future guides.</description>
+      <content>&lt;p&gt;You need to host your own search engine. Why? Because Google, Microsoft, even DuckDuckGo, who has a &lt;a href=&#34;https://www.msn.com/en-us/news/technology/duckduckgo-in-hot-water-over-hidden-tracking-agreement-with-microsoft/ar-AAXILR1&#34;&gt;weird relationship&lt;/a&gt; with Microsoft, are &lt;em&gt;all&lt;/em&gt; tracking you. In fact, Google itself has said that it stores more than an &lt;em&gt;exabyte&lt;/em&gt; of &lt;em&gt;your&lt;/em&gt; data. That&amp;rsquo;s kinda creepy. Even though most of us have nothing to hide from Google (right?), we could all do with a bit more privacy. For just ten minutes of your time, and a payment of pocket change every month, you&amp;rsquo;ll be able to host your own search engine, along with a bunch of other stuff which I will cover in future guides. The search engine we will be hosting today is a meta search engine called SearXNG, which pulls results from all the major search engines and compiles them into a list of results. Since you are self hosting it, none of your data is being leaked to Google. That is an absolute win in my opinion.&lt;/p&gt;
+&lt;h2 id=&#34;step-1-getting-a-vps&#34;&gt;Step 1: Getting a VPS&lt;/h2&gt;
+&lt;p&gt;Though you can host this on your own server, it is much easier to do so on a VPS, because most come with an IPv4 address built in, which means you won&amp;rsquo;t have to set up a reverse proxy. I will be doing this on a Digital Ocean droplet, because free student money. Getting a Digital Ocean droplet is really simple. Just sign up for a Digital Ocean account, give them all your payment info, and create a new droplet by clicking the very obvious green button in the top right. The cheapest plan will be more than enough, even if you plan to host a Nextcloud or VPN on it later. After you create your droplet, you should be able to see your droplet&amp;rsquo;s ipv4 address. In a terminal, run&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ssh root@&amp;lt;your ipv4 address&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;After entering the root password specified on setup, you should be greeted by your droplet&amp;rsquo;s terminal.&lt;/p&gt;
+&lt;h2 id=&#34;step-2-installing-dependencies&#34;&gt;Step 2: Installing Dependencies&lt;/h2&gt;
+&lt;p&gt;When setting up a new server, it&amp;rsquo;s always good practice to update the system. Run&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt update &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt upgrade
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We are going to be hosting our SearX instance through Docker, so go ahead and install that and Docker Compose with&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt install docker.io docker-compose
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You should now be all set to begin setting up SearX.&lt;/p&gt;
+&lt;h2 id=&#34;step-3-setting-up-searx&#34;&gt;Step 3: Setting Up SearX&lt;/h2&gt;
+&lt;p&gt;In your domain&amp;rsquo;s control panel, add an A record that points to your droplet&amp;rsquo;s ipv4 address. Then, SSH back into your server and download the SearX docker image.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone https://github.com/searxng/searxng-docker.git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Navigate to the directory using &lt;code&gt;cd searxng-docker&lt;/code&gt; and edit the .env file using &lt;code&gt;nano .env&lt;/code&gt;. Change the SEARX_HOSTNAME field to your domain, and the LETSENCRYPT_EMAIL to your email address. This docker image sets up an SSL certificate for you, which is pretty cool. Now, use this command to generate a private key that is then placed into your .env file.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sed -i &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;s|ultrasecretkey|&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;openssl rand -hex 32&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt; |g&amp;#34;&lt;/span&gt; searxng/settings.yml
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Finally, to run the Docker container, run&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo docker-compose up -d
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Congratulations! If you navigate to your domain now, you should see SearX sitting there, looking pretty. You&amp;rsquo;ve successfully hosted your own SearXNG instance.&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

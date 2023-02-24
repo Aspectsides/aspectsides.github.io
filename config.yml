@@ -1,156 +1,199 @@
-# baseURL = 'https://aspectsides.github.io'
-# languageCode = 'en-us'
-# title = "Aspect's Website"
-# theme = 'ananke'
-# publishDir = "docs"
-baseURL: "https://aspectsides.github.io/"
-title: Aspect
+## baseURL = 'https://aspectsides.github.io'
+## languageCode = 'en-us'
+## title = "Aspect's Website"
+## theme = 'ananke'
+## publishDir = "docs"
+#baseURL: "https://aspectsides.github.io/"
+#title: Aspect
+#paginate: 5
+#theme: PaperMod
+#publishDir: "docs"
+#enableRobotsTXT: true
+#buildDrafts: false
+#buildFuture: false
+#buildExpired: false
+#
+#googleAnalytics: UA-123-45
+#
+#minify:
+#  disableXML: true
+#  minifyOutput: true
+#
+#params:
+#  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+#  title: ExampleSite
+#  description: "Aspect's Personal Site"
+#  keywords: [Blog, Portfolio, PaperMod]
+#  author: Me
+#  # author: ["Me", "You"] # multiple authors
+#  images: ["<link or path of image for opengraph, twitter-cards>"]
+#  DateFormat: "January 2, 2006"
+#  defaultTheme: auto # dark, light
+#  disableThemeToggle: false
+#
+#  ShowReadingTime: true
+#  ShowShareButtons: true
+#  ShowPostNavLinks: true
+#  ShowBreadCrumbs: true
+#  ShowCodeCopyButtons: false
+#  ShowWordCount: true
+#  ShowRssButtonInSectionTermList: true
+#  UseHugoToc: true
+#  disableSpecial1stPost: false
+#  disableScrollToTop: false
+#  comments: false
+#  hidemeta: false
+#  hideSummary: false
+#  showtoc: false
+#  tocopen: false
+#
+#  assets:
+#    # disableHLJS: true # to disable highlight.js
+#    # disableFingerprinting: true
+#    favicon: "/favicon.ico"
+#    favicon16x16:  "/favicon-16x16.png"
+#    favicon32x32:  "/favicon-32x32.png"
+#    apple_touch_icon:  "/apple-touch-icon.png"
+#    # safari_pinned_tab:  "/safari-pinned-tab.svg"
+#
+#  label:
+#    text: "Home"
+#    icon: /apple-touch-icon.png
+#    iconHeight: 35
+#
+#  # profile-mode
+#  profileMode:
+#    enabled: false # needs to be explicitly set
+#    title: ExampleSite
+#    subtitle: "This is subtitle"
+#    imageUrl: "<img location>"
+#    imageWidth: 120
+#    imageHeight: 120
+#    imageTitle: my image
+#    buttons:
+#      - name: Posts
+#        url: posts
+#      - name: Tags
+#        url: tags
+#
+#  # home-info mode
+#  homeInfoParams:
+#    Title: "Hey."
+#    Content: I go on rants here. 
+#
+#  socialIcons:
+#    - name: mastodon
+#      url: "https://tilde.zone/@aspect"
+#    - name: stackoverflow
+#      url: "https://stackoverflow.com/users/21064109/aspectsides"
+#    - name: github
+#      url: "https://github.com/aspectsides"
+#    - name: ycombinator
+#      url: "https://news.ycombinator.com/user?id=aspectsides"
+#    - name: steam
+#      url: "https://steamcommunity.com/profiles/76561199134924516/"
+#
+#  analytics:
+#    google:
+#      SiteVerificationTag: "XYZabc"
+#    bing:
+#      SiteVerificationTag: "XYZabc"
+#    yandex:
+#      SiteVerificationTag: "XYZabc"
+#
+#  cover:
+#    hidden: true # hide everywhere but not in structured data
+#    hiddenInList: true # hide on list pages and home
+#    hiddenInSingle: true # hide on single page
+#
+#  editPost:
+#    URL: "https://github.com/aspectsides.github.io/docs"
+#    Text: "Suggest Changes" # edit text
+#    appendFilePath: true # to append file path to Edit link
+#
+#  # for search
+#  # https://fusejs.io/api/options.html
+#  fuseOpts:
+#    isCaseSensitive: false
+#    shouldSort: true
+#    location: 0
+#    distance: 1000
+#    threshold: 0.4
+#    minMatchCharLength: 0
+#    keys: ["title", "permalink", "summary", "content"]
+#menu:
+#  main:
+#    - identifier: categories
+#      name: categories
+#      url: /categories/
+#      weight: 10
+#    - identifier: archive
+#      name: archive
+#      url: /archives/
+#      weight: 20
+#    - identifier: search
+#      name: search
+#      url: /search/
+#      weight: 10
+#    - identifier: tilde
+#      name: tilde
+#      url: https://aspectsides.tilde.team
+#      weight: 30
+#pygmentsUseClasses: true
+#markup:
+#  highlight:
+#    noClasses: false
+#    # anchorLineNos: true
+#    # codeFences: true
+#    # guessSyntax: true
+#    # lineNos: true
+#    # style: monokai
+#
+#outputs:
+#    home:
+#        - HTML
+#        - RSS
+#        - JSON # is necessary
+
+baseUrl: /
+languageCode: en-us
+theme: terminal
 paginate: 5
-theme: PaperMod
-publishDir: "docs"
-enableRobotsTXT: true
-buildDrafts: false
-buildFuture: false
-buildExpired: false
-
-googleAnalytics: UA-123-45
-
-minify:
-  disableXML: true
-  minifyOutput: true
 
 params:
-  env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: ExampleSite
-  description: "Aspect's Personal Site"
-  keywords: [Blog, Portfolio, PaperMod]
-  author: Me
-  # author: ["Me", "You"] # multiple authors
-  images: ["<link or path of image for opengraph, twitter-cards>"]
-  DateFormat: "January 2, 2006"
-  defaultTheme: auto # dark, light
-  disableThemeToggle: false
+  # dir name of your blog content (default is `content/posts`)
+  contentTypeName: posts
+  # ["orange", "blue", "red", "green", "pink"]
+  themeColor: blue
+  # if you set this to 0, only submenu trigger will be visible
+  showMenuItems: 3
+  # show selector to switch language
+  showLanguageSelector: false
+  # set theme to full screen width
+  fullWidthTheme: false
+  # center theme with default width
+  centerTheme: true
 
-  ShowReadingTime: true
-  ShowShareButtons: true
-  ShowPostNavLinks: true
-  ShowBreadCrumbs: true
-  ShowCodeCopyButtons: false
-  ShowWordCount: true
-  ShowRssButtonInSectionTermList: true
-  UseHugoToc: true
-  disableSpecial1stPost: false
-  disableScrollToTop: false
-  comments: false
-  hidemeta: false
-  hideSummary: false
-  showtoc: false
-  tocopen: false
+languages:
+  en:
+    languageName: English
+    title: Aspect
+    subtitle: Amogus.
+    keywords: ''
+    menuMore: Show more
+    readMore: Read more
+    readOtherPosts: Read other posts
 
-  assets:
-    # disableHLJS: true # to disable highlight.js
-    # disableFingerprinting: true
-    favicon: "/favicon.ico"
-    favicon16x16:  "/favicon-16x16.png"
-    favicon32x32:  "/favicon-32x32.png"
-    apple_touch_icon:  "/apple-touch-icon.png"
-    # safari_pinned_tab:  "/safari-pinned-tab.svg"
+    params:
+      logo:
+        logoText: Aspect
+        logoHomeLink: /
 
-  label:
-    text: "Home"
-    icon: /apple-touch-icon.png
-    iconHeight: 35
-
-  # profile-mode
-  profileMode:
-    enabled: false # needs to be explicitly set
-    title: ExampleSite
-    subtitle: "This is subtitle"
-    imageUrl: "<img location>"
-    imageWidth: 120
-    imageHeight: 120
-    imageTitle: my image
-    buttons:
-      - name: Posts
-        url: posts
-      - name: Tags
-        url: tags
-
-  # home-info mode
-  homeInfoParams:
-    Title: "Hey."
-    Content: I go on rants here. 
-
-  socialIcons:
-    - name: mastodon
-      url: "https://tilde.zone/@aspect"
-    - name: stackoverflow
-      url: "https://stackoverflow.com/users/21064109/aspectsides"
-    - name: github
-      url: "https://github.com/aspectsides"
-    - name: ycombinator
-      url: "https://news.ycombinator.com/user?id=aspectsides"
-    - name: steam
-      url: "https://steamcommunity.com/profiles/76561199134924516/"
-
-  analytics:
-    google:
-      SiteVerificationTag: "XYZabc"
-    bing:
-      SiteVerificationTag: "XYZabc"
-    yandex:
-      SiteVerificationTag: "XYZabc"
-
-  cover:
-    hidden: true # hide everywhere but not in structured data
-    hiddenInList: true # hide on list pages and home
-    hiddenInSingle: true # hide on single page
-
-  editPost:
-    URL: "https://github.com/aspectsides.github.io/docs"
-    Text: "Suggest Changes" # edit text
-    appendFilePath: true # to append file path to Edit link
-
-  # for search
-  # https://fusejs.io/api/options.html
-  fuseOpts:
-    isCaseSensitive: false
-    shouldSort: true
-    location: 0
-    distance: 1000
-    threshold: 0.4
-    minMatchCharLength: 0
-    keys: ["title", "permalink", "summary", "content"]
-menu:
-  main:
-    - identifier: categories
-      name: categories
-      url: /categories/
-      weight: 10
-    - identifier: archive
-      name: archive
-      url: /archives/
-      weight: 20
-    - identifier: search
-      name: search
-      url: /search/
-      weight: 10
-    - identifier: tilde
-      name: tilde
-      url: https://aspectsides.tilde.team
-      weight: 30
-pygmentsUseClasses: true
-markup:
-  highlight:
-    noClasses: false
-    # anchorLineNos: true
-    # codeFences: true
-    # guessSyntax: true
-    # lineNos: true
-    # style: monokai
-
-outputs:
-    home:
-        - HTML
-        - RSS
-        - JSON # is necessary
+    menu:
+      main:
+      - identifier: about
+        name: About
+        url: /about
+      - identifier: showcase
+        name: Showcase
+        url: /showcase

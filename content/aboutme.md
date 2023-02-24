@@ -2,7 +2,7 @@
 title: "About Me"
 date: 2023-01-23T16:22:46-08:00
 draft: false
-url: "/aboutme/"
+url: "/about"
 ---
 # About Me
 

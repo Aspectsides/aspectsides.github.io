@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Setting up Neovim for Editing LaTeX :: Aspect</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="This is the first article in a three part series in which I discuss how I write math notes with LaTeX and Neovim.
+Why I Started Using LaTeX One thing I&amp;rsquo;ve always recognized about myself is that I have terrible handwriting. Problem is, I&amp;rsquo;m a math major. I kinda need to be able to read my lecture notes later so I don&amp;rsquo;t fail the class. That&amp;rsquo;s when I discovered this blog post by Gilles Castel." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+
+<link rel="canonical" href="/posts/notes-1/" />
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/styles.css">
+
+
+
+
+
+
+
+  <link rel="shortcut icon" href="/img/theme-colors/blue.png">
+  <link rel="apple-touch-icon" href="/img/theme-colors/blue.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Setting up Neovim for Editing LaTeX">
+<meta property="og:description" content="This is the first article in a three part series in which I discuss how I write math notes with LaTeX and Neovim.
+Why I Started Using LaTeX One thing I&amp;rsquo;ve always recognized about myself is that I have terrible handwriting. Problem is, I&amp;rsquo;m a math major. I kinda need to be able to read my lecture notes later so I don&amp;rsquo;t fail the class. That&amp;rsquo;s when I discovered this blog post by Gilles Castel." />
+<meta property="og:url" content="/posts/notes-1/" />
+<meta property="og:site_name" content="Aspect" />
+
+  
+    <meta property="og:image" content="/img/favicon/blue.png">
+  
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+  <meta property="article:published_time" content="2023-01-28 12:45:41 -0800 PST" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="blue">
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Aspect
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/showcase">Showcase</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/showcase">Showcase</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="/posts/notes-1/">Setting up Neovim for Editing LaTeX</a>
+  </h1>
+  <div class="post-meta">
+    
+      <time class="post-date">
+        2023-01-28 ::
+        
+      </time>
+    
+    
+    
+  </div>
+
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <p>This is the first article in a three part series in which I discuss how I write math notes with LaTeX and Neovim.</p>
+<h2 id="why-i-started-using-latex">Why I Started Using LaTeX<a href="#why-i-started-using-latex" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>One thing I&rsquo;ve always recognized about myself is that I have terrible handwriting. Problem is, I&rsquo;m a math major. I kinda need to be able to read my lecture notes later so I don&rsquo;t fail the class. That&rsquo;s when I discovered <a href="https://castel.dev/post/lecture-notes-1/">this</a> blog post by Gilles Castel. It introduced me to the magic of Neovim combined with LaTeX. It took me a while to learn, but after becoming proficient in LaTeX i find that I can take much more readable math notes as well as being able to type them up faster than all my clasmates. They think I&rsquo;m a wizard.</p>
+<h2 id="setting-up-neovim">Setting up Neovim<a href="#setting-up-neovim" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>Here is what my screen looks like when I&rsquo;m writing LaTeX notes:</p>
+<p><img src="/latex1.png" alt="Latex"></p>
+<p>The window on the left is Neovim configured with a few plugins that enhance the LaTeX experience. The window on the left is Zathura, my PDF reader that updates whenever I recompile my LaTeX file by saving it.</p>
+<p>I use my own Neovim configuration written in Lua. You can get it over on my <a href="https://github.com/aspectsides/archfiles">Github</a>. Configuring Neovim from scratch is very time consuming, so if you just want to get started with LaTeX you can steal my config.</p>
+<h3 id="plugins">Plugins<a href="#plugins" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>There are a few choice plugins that I find greatly enhances my efficiency whenever I&rsquo;m typing LaTeX. The first is <a href="https://github.com/lervag/vimtex">vimtex</a>. You can install this plugin using your preferred package manager. I use <a href="https://github.com/wbthomason/packer.nvim">packer</a>, so I put</p>
+<pre tabindex="0"><code>use &#39;lervag/vimtex&#39;
+</code></pre><p>in my <code>plugins.lua</code>. VimTex is a filetype plugin for .tex files that makes it much easier to actively compile LaTeX files in Neovim. Simply run <code>:VimtexCompile</code> while in a LaTeX file and you should see your default PDF reader open with the compiled PDF. I bound this to <code>&lt;leader&gt;ll</code> for easier access.</p>
+<pre tabindex="0"><code>keymap(&#34;n&#34;, &#34;&lt;leader&gt;ll&#34;, &#34;:VimtexCompile&lt;CR&gt;&#34;, opts)
+</code></pre><p>The second plugin that I use is a snippets plugin called <a href="https://github.com/L3MON4D3/LuaSnip">LuaSnip</a>. In Gilles Castel&rsquo;s article, he uses UltiSnips, which is written in Vimscript. You can use either, but I prefer Luasnip because the rest of my config is written in Lua. Install LuaSnip with</p>
+<pre tabindex="0"><code>use &#39;L3MON4D3/LuaSnip&#39;
+</code></pre><p>Luasnip allows me to type otherwise complicated Lua functions with only a few keypresses. For example, <code>beg</code> expands to</p>
+<pre tabindex="0"><code>\begin{}
+  
+\end{}
+</code></pre><p>These various snippets are ported over from Gilles&rsquo; UltiSnips and are packaged at a repository over on <a href="https://github.com/iurimateus/luasnip-latex-snippets.nvim">Github</a>. Install them with</p>
+<pre tabindex="0"><code>use &#39;iurimateus/luasnip-latex-snippets.nvim&#39;
+</code></pre><p>Now that you have set up Neovim to work well with LaTeX, it&rsquo;s time to start learning the language. In the next part of this series, I will go over the basics of LaTeX and a few tricks I use involving VimTex and snippets. Now go learn some LaTeX.</p>
+
+      </div></div>
+
+  
+    
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        <span class="button previous">
+            <a href="/posts/desktop_icons/">
+                <span class="button__icon">←</span>
+                <span class="button__text">Desktop Icons in AwesomeWM</span>
+            </a>
+        </span>
+        
+        
+        <span class="button next">
+            <a href="/posts/orgroam/">
+                <span class="button__text">Org Roam</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2023 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/bundle.min.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

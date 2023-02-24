@@ -12,7 +12,7 @@ draft: false
 ## Step 1: Getting a VPS
   
   Though you can host this on your own server, it is much easier to do so on a VPS, because most come with an IPv4 address built in, which means you won't have to set up a reverse proxy. I will be doing this on a Digital Ocean droplet, because free student money. Getting a Digital Ocean droplet is really simple. Just sign up for a Digital Ocean account, give them all your payment info, and create a new droplet by clicking the very obvious green button in the top right. The cheapest plan will be more than enough, even if you plan to host a Nextcloud or VPN on it later. After you create your droplet, you should be able to see your droplet's ipv4 address. In a terminal, run 
-```
+```shell
 ssh root@<your ipv4 address>
 ```
 After entering the root password specified on setup, you should be greeted by your droplet's terminal. 
@@ -20,11 +20,11 @@ After entering the root password specified on setup, you should be greeted by yo
 ## Step 2: Installing Dependencies
 
 When setting up a new server, it's always good practice to update the system. Run
-```
+```shell
 sudo apt update && sudo apt upgrade
 ```
 We are going to be hosting our SearX instance through Docker, so go ahead and install that and Docker Compose with
-```
+```shell
 sudo apt install docker.io docker-compose
 ```
 You should now be all set to begin setting up SearX.
@@ -32,15 +32,15 @@ You should now be all set to begin setting up SearX.
 ## Step 3: Setting Up SearX
 
 In your domain's control panel, add an A record that points to your droplet's ipv4 address. Then, SSH back into your server and download the SearX docker image. 
-```
+```shell
 git clone https://github.com/searxng/searxng-docker.git
 ```
 Navigate to the directory using `cd searxng-docker` and edit the .env file using `nano .env`. Change the SEARX_HOSTNAME field to your domain, and the LETSENCRYPT_EMAIL to your email address. This docker image sets up an SSL certificate for you, which is pretty cool. Now, use this command to generate a private key that is then placed into your .env file.
-```
+```shell
 sed -i "s|ultrasecretkey|$(openssl rand -hex 32) |g" searxng/settings.yml
 ```
 Finally, to run the Docker container, run 
-```
+```shell
 sudo docker-compose up -d
 ```
 Congratulations! If you navigate to your domain now, you should see SearX sitting there, looking pretty. You've successfully hosted your own SearXNG instance.
