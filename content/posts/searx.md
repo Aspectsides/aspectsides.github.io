@@ -1,11 +1,18 @@
----
-title: "Self Hosting Your Own Search Engine"
-date: 2023-02-23T09:17:43-08:00
-categories:
-  - Selfhosting
-  - Privacy
-draft: false
----
++++
+title = "Self Hosting Your Own Search Engine"
+date = "2023-02-24T15:44:09-08:00"
+author = "Daniel Xu"
+authorTwitter = "" #do not include @
+cover = ""
+tags = ["selfhosting", "privacy", "searx", "docker"]
+keywords = ["", ""]
+description = "In this guide I'll go through the steps to hosting a SearXNG instance on a VPS using Docker."
+showFullContent = false
+readingTime = false
+hideComments = false
+draft = false
+color = "" #color from the theme settings
++++
 
   You need to host your own search engine. Why? Because Google, Microsoft, even DuckDuckGo, who has a [weird relationship](https://www.msn.com/en-us/news/technology/duckduckgo-in-hot-water-over-hidden-tracking-agreement-with-microsoft/ar-AAXILR1) with Microsoft, are *all* tracking you. In fact, Google itself has said that it stores more than an *exabyte* of *your* data. That's kinda creepy. Even though most of us have nothing to hide from Google (right?), we could all do with a bit more privacy. For just ten minutes of your time, and a payment of pocket change every month, you'll be able to host your own search engine, along with a bunch of other stuff which I will cover in future guides. The search engine we will be hosting today is a meta search engine called SearXNG, which pulls results from all the major search engines and compiles them into a list of results. Since you are self hosting it, none of your data is being leaked to Google. That is an absolute win in my opinion.
 
