@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>terminal on Aspect</title>
+    <link>/tags/terminal/</link>
+    <description>Recent content in terminal on Aspect</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 24 Feb 2023 16:08:41 -0800</lastBuildDate><atom:link href="/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Switching to Hilbish</title>
+      <link>/posts/hilbish/</link>
+      <pubDate>Fri, 24 Feb 2023 16:08:41 -0800</pubDate>
+      
+      <guid>/posts/hilbish/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+  </channel>
+</rss>

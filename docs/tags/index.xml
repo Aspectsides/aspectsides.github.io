@@ -6,7 +6,67 @@
     <description>Recent content in Tags on Aspect</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Feb 2023 15:44:09 -0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Feb 2023 16:08:41 -0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>linux</title>
+      <link>/tags/linux/</link>
+      <pubDate>Fri, 24 Feb 2023 16:08:41 -0800</pubDate>
+      
+      <guid>/tags/linux/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>lua</title>
+      <link>/tags/lua/</link>
+      <pubDate>Fri, 24 Feb 2023 16:08:41 -0800</pubDate>
+      
+      <guid>/tags/lua/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>ricing</title>
+      <link>/tags/ricing/</link>
+      <pubDate>Fri, 24 Feb 2023 16:08:41 -0800</pubDate>
+      
+      <guid>/tags/ricing/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>shell</title>
+      <link>/tags/shell/</link>
+      <pubDate>Fri, 24 Feb 2023 16:08:41 -0800</pubDate>
+      
+      <guid>/tags/shell/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>terminal</title>
+      <link>/tags/terminal/</link>
+      <pubDate>Fri, 24 Feb 2023 16:08:41 -0800</pubDate>
+      
+      <guid>/tags/terminal/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>wm</title>
+      <link>/tags/wm/</link>
+      <pubDate>Fri, 24 Feb 2023 16:08:41 -0800</pubDate>
+      
+      <guid>/tags/wm/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
     <item>
       <title>docker</title>
       <link>/tags/docker/</link>
@@ -53,16 +113,6 @@
       <pubDate>Sun, 22 Jan 2023 23:20:06 -0800</pubDate>
       
       <guid>/tags/catppuccin/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
-      <title>ricing</title>
-      <link>/tags/ricing/</link>
-      <pubDate>Sun, 22 Jan 2023 23:20:06 -0800</pubDate>
-      
-      <guid>/tags/ricing/</guid>
       <description></description>
       <content></content>
     </item>

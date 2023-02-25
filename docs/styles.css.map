@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "styles.css",
-	"sourceRoot": "/home/aspect/Documents/website",
+	"sourceRoot": "/home/aspect/repos/website",
 	"sources": [
 		"css/base.scss",
 		"themes/terminal/assets/css/variables.scss",

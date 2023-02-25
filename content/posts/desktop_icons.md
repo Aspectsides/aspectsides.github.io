@@ -1,8 +1,17 @@
----
-title: "Desktop Icons in AwesomeWM"
-date: 2023-02-07T23:06:15-08:00
-draft: false
----
++++
+title = "Desktop Icons in AwesomeWM"
+date = "2023-02-24T16:08:41-08:00"
+author = "Daniel Xu"
+authorTwitter = "" #do not include @
+cover = "hell.jpg"
+tags = ["linux", "ricing", "wm"]
+keywords = ["", ""]
+description = "Just a quick little guide on how to add desktop icons to your window manager rice."
+showFullContent = false
+readingTime = false
+hideComments = false
+color = "" #color from the theme settings
++++
 
 Yes, I know what you're going to say. A Linux user, with *desktop icons* on his desktop? Blasphemy! And you're right. It is blasphemy. I still do it, though. I mean, it's not like my desktop looks like this.
 

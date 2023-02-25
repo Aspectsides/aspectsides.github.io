@@ -3,12 +3,39 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/</loc>
-    <lastmod>2023-02-24T15:44:09-08:00</lastmod>
+    <lastmod>2023-02-24T16:08:41-08:00</lastmod>
   </url><url>
-    <loc>/tags/docker/</loc>
-    <lastmod>2023-02-24T15:44:09-08:00</lastmod>
+    <loc>/posts/desktop_icons/</loc>
+    <lastmod>2023-02-24T16:08:41-08:00</lastmod>
+  </url><url>
+    <loc>/tags/linux/</loc>
+    <lastmod>2023-02-24T16:08:41-08:00</lastmod>
+  </url><url>
+    <loc>/tags/lua/</loc>
+    <lastmod>2023-02-24T16:08:41-08:00</lastmod>
   </url><url>
     <loc>/posts/</loc>
+    <lastmod>2023-02-24T16:08:41-08:00</lastmod>
+  </url><url>
+    <loc>/tags/ricing/</loc>
+    <lastmod>2023-02-24T16:08:41-08:00</lastmod>
+  </url><url>
+    <loc>/tags/shell/</loc>
+    <lastmod>2023-02-24T16:08:41-08:00</lastmod>
+  </url><url>
+    <loc>/posts/hilbish/</loc>
+    <lastmod>2023-02-24T16:08:41-08:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2023-02-24T16:08:41-08:00</lastmod>
+  </url><url>
+    <loc>/tags/terminal/</loc>
+    <lastmod>2023-02-24T16:08:41-08:00</lastmod>
+  </url><url>
+    <loc>/tags/wm/</loc>
+    <lastmod>2023-02-24T16:08:41-08:00</lastmod>
+  </url><url>
+    <loc>/tags/docker/</loc>
     <lastmod>2023-02-24T15:44:09-08:00</lastmod>
   </url><url>
     <loc>/tags/privacy/</loc>
@@ -22,12 +49,6 @@
   </url><url>
     <loc>/tags/selfhosting/</loc>
     <lastmod>2023-02-24T15:44:09-08:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2023-02-24T15:44:09-08:00</lastmod>
-  </url><url>
-    <loc>/posts/desktop_icons/</loc>
-    <lastmod>2023-02-07T23:06:15-08:00</lastmod>
   </url><url>
     <loc>/posts/notes-1/</loc>
     <lastmod>2023-01-28T12:45:41-08:00</lastmod>
@@ -51,9 +72,6 @@
     <lastmod>2023-01-22T23:20:06-08:00</lastmod>
   </url><url>
     <loc>/categories/linux/</loc>
-    <lastmod>2023-01-22T23:20:06-08:00</lastmod>
-  </url><url>
-    <loc>/tags/ricing/</loc>
     <lastmod>2023-01-22T23:20:06-08:00</lastmod>
   </url><url>
     <loc>/categories/ricing/</loc>
