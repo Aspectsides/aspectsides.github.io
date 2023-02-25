@@ -49,8 +49,36 @@ end)
       <pubDate>Fri, 24 Feb 2023 16:08:41 -0800</pubDate>
       
       <guid>/posts/hilbish/</guid>
-      <description></description>
-      <content></content>
+      <description>Intro Hilbish is a shell that is written in Go and scriptable in Lua. It&amp;rsquo;s a relatively new face on the shell block, and I have decided to switch to it over zsh, the shell that I&amp;rsquo;ve been using for a long time. It supports all the basic things you would expect a shell to be able to do, including aliases, adding to the path, etc. In many respects, it fulfills what most of us use our shell for.</description>
+      <content>&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;
+&lt;p&gt;Hilbish is a shell that is written in Go and scriptable in Lua. It&amp;rsquo;s a relatively new face on the shell block, and I have decided to switch to it over zsh, the shell that I&amp;rsquo;ve been using for a long time. It supports all the basic things you would expect a shell to be able to do, including aliases, adding to the path, etc. In many respects, it fulfills what most of us use our shell for. However, if you are someone who writes advanced shell scripts in your terminal without a shebang, Hilbish isn&amp;rsquo;t for you. That should mean that Hilbish is for everyone, but alas, we do not live in a perfect world. All of us sane human beings can continue believing in Lua supremacy.&lt;/p&gt;
+&lt;h1 id=&#34;installation&#34;&gt;Installation&lt;/h1&gt;
+&lt;p&gt;Installing Hilbish is a relatively simple task. As far as I know, Hilbish isn&amp;rsquo;t on the official Arch repos nor is it on the AUR, so we&amp;rsquo;ll have to build it from source. Gentoo users are probably really happy right now. First, ensure that &lt;a href=&#34;https://go.dev/&#34;&gt;Go 1.17+&lt;/a&gt; and &lt;a href=&#34;https://taskfile.dev/installation/&#34;&gt;Task&lt;/a&gt; are installed on your system, then clone Hilbish&amp;rsquo;s repo.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone --recursive https://github.com/Rosettea/Hilbish
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd Hilbish
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;go get -d ./...
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Build and install the shell by running&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;task
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo task install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Congratulations. You are now an ascended being.&lt;/p&gt;
+&lt;h1 id=&#34;usage&#34;&gt;Usage&lt;/h1&gt;
+&lt;p&gt;There are multiple ways to set Hilbish as the default shell. You can set Hilbish as the login shell by running:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;chsh -s &lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;which hilbish&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;However, I do &lt;em&gt;not&lt;/em&gt; recommend doing this, as Hilbish is not POSIX compliant and you want your login shell to be POSIX compliant. If you do this, a couple of important environment variables might be missing. I recommend running hilbish &lt;em&gt;after&lt;/em&gt; the login shell via something like &lt;code&gt;.zlogin&lt;/code&gt;, which runs after the login shell when booting up your computer. For example,&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;exec hilbish -S -l
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will replace your shell with Hilbish, set the &lt;code&gt;$SHELL&lt;/code&gt; variable to Hilbish and launch it as a login shell. Hilbish is, similar to Awesome, configured with an &lt;code&gt;init.lua&lt;/code&gt; file located in &lt;code&gt;~/.config/hilbish&lt;/code&gt;. I&amp;rsquo;ll go over a few quick tips here, but I would recommend checking out Hilbish&amp;rsquo;s &lt;a href=&#34;https://rosettea.github.io/Hilbish/docs/&#34;&gt;documentation&lt;/a&gt;, as it goes way more in-depth than I ever could.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Path can be set like this:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-lua&#34; data-lang=&#34;lua&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hilbish.appendPath &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;~/.local/bin/&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Aliases can be set like this:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-lua&#34; data-lang=&#34;lua&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hilbish.alias(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;cls&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;clear&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;why-i-use-hilbish&#34;&gt;Why I use Hilbish&lt;/h1&gt;
+&lt;p&gt;I will admit, after such a long time using zsh, Hilbish took some getting used to. I found myself missing features such as tab-complete and history-based completion. For the first five minutes. Turns out, there is tab complete. It&amp;rsquo;s some pretty darn good tab complete too. It knows whether to show you the results for possible files or directories or show you executables in your path. Then I accidentally pressed ctrl+r and discovered that there was history search too. Hilbish is much more fully featured out of the box than zsh is.&lt;/p&gt;
+&lt;p&gt;Truth is, you really don&amp;rsquo;t need a POSIX compliant shell other than to set enviroment variables. As soon as that&amp;rsquo;s done, that POSIX compliant shell can promptly frick off in favor of something else. Hilbish is just a really comfortable shell, much more so than zsh, that does everything that I need it to. That&amp;rsquo;s why I use it. Also Lua.&lt;/p&gt;
+</content>
     </item>
     
     <item>
@@ -146,8 +174,8 @@ Why I Started Using LaTeX One thing I&amp;rsquo;ve always recognized about mysel
       <pubDate>Mon, 23 Jan 2023 16:22:46 -0800</pubDate>
       
       <guid>/about/</guid>
-      <description>./daniel.sh Output: -------------- Position: Student in San Francisco (anything further would be doxxing myself) Languages: Lua, C++, Bash, JavaScript, Python Interests: Linux, Selfhosting, Music, Biking Github: https://github.com/Aspectsides Fediverse: https://tilde.zone/@aspect Contact me using my Keyoxide, encrypt a message and send it to any of the links there. I&amp;rsquo;m always up to chat!</description>
-      <content>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;./daniel.sh
+      <description>~$ ./daniel.sh Output: -------------- Position: Student in San Francisco (anything further would be doxxing myself) Languages: Lua, C++, Bash, JavaScript, Python Interests: Linux, Selfhosting, Music, Biking Github: https://github.com/Aspectsides Fediverse: https://tilde.zone/@aspect ~$ ./geek.code GCS/M/MU d- s: a--- L++ E+ W++ M PS PE PGP+ t R+ tv b++ DI+ G e- !h !r Contact me using my Keyoxide, encrypt a message and send it to any of the links there. I&amp;rsquo;m always up to chat!</description>
+      <content>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;~$ ./daniel.sh
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Output:
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--------------
@@ -157,6 +185,8 @@ Why I Started Using LaTeX One thing I&amp;rsquo;ve always recognized about mysel
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Interests: Linux, Selfhosting, Music, Biking
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Github: https://github.com/Aspectsides
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Fediverse: https://tilde.zone/@aspect
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;~$ ./geek.code
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;GCS/M/MU d- s: a--- L++ E+ W++ M PS PE PGP+ t R+ tv b++ DI+ G e- !h !r
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Contact me using my &lt;a href=&#34;https://keyoxide.org/87115B4FA47081F4323F363894EE61D3896CEA6B&#34;&gt;Keyoxide&lt;/a&gt;, encrypt a message and send it to any of the links there. I&amp;rsquo;m always up to chat!&lt;/p&gt;
 </content>
     </item>

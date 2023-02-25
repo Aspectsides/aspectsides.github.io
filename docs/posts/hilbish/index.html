@@ -6,7 +6,7 @@
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Why I switched from zsh to Hilbish, a shell written in Go and scriptable in Lua." />
+<meta name="description" content="Shells don&#39;t have to be POSIX compliant." />
 <meta name="keywords" content=", " />
 <meta name="robots" content="noodp" />
 
@@ -42,13 +42,13 @@
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Switching to Hilbish">
-<meta property="og:description" content="Why I switched from zsh to Hilbish, a shell written in Go and scriptable in Lua." />
+<meta property="og:description" content="Shells don&#39;t have to be POSIX compliant." />
 <meta property="og:url" content="/posts/hilbish/" />
 <meta property="og:site_name" content="Aspect" />
 
   
   
-  <meta property="og:image" content="/">
+  <meta property="og:image" content="/hilbish.png">
 
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="627">
@@ -93,10 +93,6 @@
           <li><a href="/about">About</a></li>
         
       
-        
-          <li><a href="/showcase">Showcase</a></li>
-        
-      
       
     </ul>
   </li>
@@ -112,10 +108,6 @@
       
         
           <li><a href="/about">About</a></li>
-        
-      
-        
-          <li><a href="/showcase">Showcase</a></li>
         
       
       
@@ -160,11 +152,45 @@
     </span>
   
   
+  <img src="/hilbish.png"
+    class="post-cover"
+    alt="Switching to Hilbish"
+    title="Cover Image" />
 
 
   
 
-  <div class="post-content"></div>
+  <div class="post-content"><div>
+        <h1 id="intro">Intro<a href="#intro" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Hilbish is a shell that is written in Go and scriptable in Lua. It&rsquo;s a relatively new face on the shell block, and I have decided to switch to it over zsh, the shell that I&rsquo;ve been using for a long time. It supports all the basic things you would expect a shell to be able to do, including aliases, adding to the path, etc. In many respects, it fulfills what most of us use our shell for. However, if you are someone who writes advanced shell scripts in your terminal without a shebang, Hilbish isn&rsquo;t for you. That should mean that Hilbish is for everyone, but alas, we do not live in a perfect world. All of us sane human beings can continue believing in Lua supremacy.</p>
+<h1 id="installation">Installation<a href="#installation" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Installing Hilbish is a relatively simple task. As far as I know, Hilbish isn&rsquo;t on the official Arch repos nor is it on the AUR, so we&rsquo;ll have to build it from source. Gentoo users are probably really happy right now. First, ensure that <a href="https://go.dev/">Go 1.17+</a> and <a href="https://taskfile.dev/installation/">Task</a> are installed on your system, then clone Hilbish&rsquo;s repo.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git clone --recursive https://github.com/Rosettea/Hilbish
+</span></span><span style="display:flex;"><span>cd Hilbish
+</span></span><span style="display:flex;"><span>go get -d ./...
+</span></span></code></pre></div><p>Build and install the shell by running</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>task
+</span></span><span style="display:flex;"><span>sudo task install
+</span></span></code></pre></div><p>Congratulations. You are now an ascended being.</p>
+<h1 id="usage">Usage<a href="#usage" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>There are multiple ways to set Hilbish as the default shell. You can set Hilbish as the login shell by running:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>chsh -s <span style="color:#66d9ef">$(</span>which hilbish<span style="color:#66d9ef">)</span>
+</span></span></code></pre></div><p>However, I do <em>not</em> recommend doing this, as Hilbish is not POSIX compliant and you want your login shell to be POSIX compliant. If you do this, a couple of important environment variables might be missing. I recommend running hilbish <em>after</em> the login shell via something like <code>.zlogin</code>, which runs after the login shell when booting up your computer. For example,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>exec hilbish -S -l
+</span></span></code></pre></div><p>This will replace your shell with Hilbish, set the <code>$SHELL</code> variable to Hilbish and launch it as a login shell. Hilbish is, similar to Awesome, configured with an <code>init.lua</code> file located in <code>~/.config/hilbish</code>. I&rsquo;ll go over a few quick tips here, but I would recommend checking out Hilbish&rsquo;s <a href="https://rosettea.github.io/Hilbish/docs/">documentation</a>, as it goes way more in-depth than I ever could.</p>
+<ul>
+<li>Path can be set like this:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span>hilbish.appendPath <span style="color:#e6db74">&#39;~/.local/bin/&#39;</span>
+</span></span></code></pre></div><ul>
+<li>Aliases can be set like this:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span>hilbish.alias(<span style="color:#e6db74">&#39;cls&#39;</span>, <span style="color:#e6db74">&#39;clear&#39;</span>)
+</span></span></code></pre></div><h1 id="why-i-use-hilbish">Why I use Hilbish<a href="#why-i-use-hilbish" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>I will admit, after such a long time using zsh, Hilbish took some getting used to. I found myself missing features such as tab-complete and history-based completion. For the first five minutes. Turns out, there is tab complete. It&rsquo;s some pretty darn good tab complete too. It knows whether to show you the results for possible files or directories or show you executables in your path. Then I accidentally pressed ctrl+r and discovered that there was history search too. Hilbish is much more fully featured out of the box than zsh is.</p>
+<p>Truth is, you really don&rsquo;t need a POSIX compliant shell other than to set enviroment variables. As soon as that&rsquo;s done, that POSIX compliant shell can promptly frick off in favor of something else. Hilbish is just a really comfortable shell, much more so than zsh, that does everything that I need it to. That&rsquo;s why I use it. Also Lua.</p>
+
+      </div></div>
 
   
     
