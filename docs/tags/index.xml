@@ -28,16 +28,6 @@
     </item>
     
     <item>
-      <title>ricing</title>
-      <link>/tags/ricing/</link>
-      <pubDate>Fri, 24 Feb 2023 16:08:41 -0800</pubDate>
-      
-      <guid>/tags/ricing/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
       <title>shell</title>
       <link>/tags/shell/</link>
       <pubDate>Fri, 24 Feb 2023 16:08:41 -0800</pubDate>
@@ -53,16 +43,6 @@
       <pubDate>Fri, 24 Feb 2023 16:08:41 -0800</pubDate>
       
       <guid>/tags/terminal/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
-      <title>wm</title>
-      <link>/tags/wm/</link>
-      <pubDate>Fri, 24 Feb 2023 16:08:41 -0800</pubDate>
-      
-      <guid>/tags/wm/</guid>
       <description></description>
       <content></content>
     </item>
@@ -103,6 +83,26 @@
       <pubDate>Fri, 24 Feb 2023 15:44:09 -0800</pubDate>
       
       <guid>/tags/selfhosting/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>ricing</title>
+      <link>/tags/ricing/</link>
+      <pubDate>Wed, 22 Feb 2023 16:08:41 -0800</pubDate>
+      
+      <guid>/tags/ricing/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>wm</title>
+      <link>/tags/wm/</link>
+      <pubDate>Wed, 22 Feb 2023 16:08:41 -0800</pubDate>
+      
+      <guid>/tags/wm/</guid>
       <description></description>
       <content></content>
     </item>

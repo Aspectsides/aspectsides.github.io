@@ -1,6 +1,6 @@
 +++
 title = "Desktop Icons in AwesomeWM"
-date = "2023-02-24T16:08:41-08:00"
+date = "2023-02-22T16:08:41-08:00"
 author = "Daniel Xu"
 authorTwitter = "" #do not include @
 cover = "hell.jpg"

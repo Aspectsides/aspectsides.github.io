@@ -8,42 +8,6 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 24 Feb 2023 16:08:41 -0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Desktop Icons in AwesomeWM</title>
-      <link>/posts/desktop_icons/</link>
-      <pubDate>Fri, 24 Feb 2023 16:08:41 -0800</pubDate>
-      
-      <guid>/posts/desktop_icons/</guid>
-      <description>Yes, I know what you&amp;rsquo;re going to say. A Linux user, with desktop icons on his desktop? Blasphemy! And you&amp;rsquo;re right. It is blasphemy. I still do it, though. I mean, it&amp;rsquo;s not like my desktop looks like this.
-That&amp;rsquo;s just wrong. I believe that as long as you put only what you really need on your desktop, it&amp;rsquo;s only slightly blasphemy. This is what my AwesomeWM desktop looks like:</description>
-      <content>&lt;p&gt;Yes, I know what you&amp;rsquo;re going to say. A Linux user, with &lt;em&gt;desktop icons&lt;/em&gt; on his desktop? Blasphemy! And you&amp;rsquo;re right. It is blasphemy. I still do it, though. I mean, it&amp;rsquo;s not like my desktop looks like this.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/hell.jpg&#34; alt=&#34;hell&#34; title=&#34;Hell.&#34;&gt;&lt;/p&gt;
-&lt;p&gt;That&amp;rsquo;s just wrong. I believe that as long as you put only what you really need on your desktop, it&amp;rsquo;s only slightly blasphemy. This is what my AwesomeWM desktop looks like:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/nice.png&#34; alt=&#34;nice&#34; title=&#34;Heaven.&#34;&gt;&lt;/p&gt;
-&lt;p&gt;As you can see, despite having &lt;em&gt;gags&lt;/em&gt; desktop icons on the screen, it still looks quite clean. I ran into a few snags while attempting to set up desktop icons in Awesome, so I decided to write a short blog post about the process&lt;/p&gt;
-&lt;p&gt;First things first, there are two file managers that I know of that support desktop icons out of the box, those being Nemo and PCManFM. I use Nemo, and I would use Nemo over PCManFM because it supports GTK3 as opposed to GTK2 and is still being actively maintained. Install Nemo with&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo pacman -S nemo
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Nemo comes with a nifty little command called &lt;code&gt;nemo-desktop&lt;/code&gt; which adds the contents of &lt;code&gt;~/Desktop&lt;/code&gt; to your desktop. If you run it now, desktop icons will not appear. You need to turn them on with&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gsettings set org.nemo.desktop show-desktop-icons true
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I would recommend putting &lt;code&gt;nemo-desktop&lt;/code&gt; in your startup script for convenience sake. The problem with using Awesome with this is that it treats &lt;code&gt;nemo-desktop&lt;/code&gt; as any other client, which means it can only be available on one tag, and not any others. I fixed this by adding a ghost tag that is not visible on the taglist as follows&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;screen.connect_signal(&amp;#34;request::desktop_decoration&amp;#34;, function(s)
-	awful.tag({ &amp;#34;1&amp;#34;, &amp;#34;2&amp;#34;, &amp;#34;3&amp;#34;, &amp;#34;4&amp;#34;, &amp;#34;5&amp;#34;, &amp;#34;6&amp;#34;, &amp;#34; &amp;#34; }, s, awful.layout.layouts[1])
-end)
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;and making &lt;code&gt;nemo-desktop&lt;/code&gt; sticky, which means it shows on all desktops&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ruled.client.append_rule {
-    id = &amp;#34;desktop&amp;#34;,
-    rule_any = {
-        class = {
-        &amp;#34;Nemo-desktop&amp;#34;
-        }
-    },
-    properties = { sticky = true, tag = &amp;#34; &amp;#34; }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;One downside (well, not really a downside for me) is that Nemo has it&amp;rsquo;s own root menu, which means you won&amp;rsquo;t be able to use your own root menu. This is fine by me because my root menu is still Awesome&amp;rsquo;s default root menu, and Nemo&amp;rsquo;s root menu is actually pretty good, integrating well with Nemo itself.&lt;/p&gt;
-&lt;p&gt;I think desktop icons are really comfy, and add a little bit of uniqueness to a rice. Hopefully this post is easy enough to follow so that you can get started adding your own desktop icons.&lt;/p&gt;
-</content>
-    </item>
-    
-    <item>
       <title>Switching to Hilbish</title>
       <link>/posts/hilbish/</link>
       <pubDate>Fri, 24 Feb 2023 16:08:41 -0800</pubDate>
@@ -107,6 +71,42 @@ end)
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Finally, to run the Docker container, run&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo docker-compose up -d
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Congratulations! If you navigate to your domain now, you should see SearX sitting there, looking pretty. You&amp;rsquo;ve successfully hosted your own SearXNG instance.&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Desktop Icons in AwesomeWM</title>
+      <link>/posts/desktop_icons/</link>
+      <pubDate>Wed, 22 Feb 2023 16:08:41 -0800</pubDate>
+      
+      <guid>/posts/desktop_icons/</guid>
+      <description>Yes, I know what you&amp;rsquo;re going to say. A Linux user, with desktop icons on his desktop? Blasphemy! And you&amp;rsquo;re right. It is blasphemy. I still do it, though. I mean, it&amp;rsquo;s not like my desktop looks like this.
+That&amp;rsquo;s just wrong. I believe that as long as you put only what you really need on your desktop, it&amp;rsquo;s only slightly blasphemy. This is what my AwesomeWM desktop looks like:</description>
+      <content>&lt;p&gt;Yes, I know what you&amp;rsquo;re going to say. A Linux user, with &lt;em&gt;desktop icons&lt;/em&gt; on his desktop? Blasphemy! And you&amp;rsquo;re right. It is blasphemy. I still do it, though. I mean, it&amp;rsquo;s not like my desktop looks like this.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/hell.jpg&#34; alt=&#34;hell&#34; title=&#34;Hell.&#34;&gt;&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s just wrong. I believe that as long as you put only what you really need on your desktop, it&amp;rsquo;s only slightly blasphemy. This is what my AwesomeWM desktop looks like:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/nice.png&#34; alt=&#34;nice&#34; title=&#34;Heaven.&#34;&gt;&lt;/p&gt;
+&lt;p&gt;As you can see, despite having &lt;em&gt;gags&lt;/em&gt; desktop icons on the screen, it still looks quite clean. I ran into a few snags while attempting to set up desktop icons in Awesome, so I decided to write a short blog post about the process&lt;/p&gt;
+&lt;p&gt;First things first, there are two file managers that I know of that support desktop icons out of the box, those being Nemo and PCManFM. I use Nemo, and I would use Nemo over PCManFM because it supports GTK3 as opposed to GTK2 and is still being actively maintained. Install Nemo with&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo pacman -S nemo
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Nemo comes with a nifty little command called &lt;code&gt;nemo-desktop&lt;/code&gt; which adds the contents of &lt;code&gt;~/Desktop&lt;/code&gt; to your desktop. If you run it now, desktop icons will not appear. You need to turn them on with&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gsettings set org.nemo.desktop show-desktop-icons true
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I would recommend putting &lt;code&gt;nemo-desktop&lt;/code&gt; in your startup script for convenience sake. The problem with using Awesome with this is that it treats &lt;code&gt;nemo-desktop&lt;/code&gt; as any other client, which means it can only be available on one tag, and not any others. I fixed this by adding a ghost tag that is not visible on the taglist as follows&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;screen.connect_signal(&amp;#34;request::desktop_decoration&amp;#34;, function(s)
+	awful.tag({ &amp;#34;1&amp;#34;, &amp;#34;2&amp;#34;, &amp;#34;3&amp;#34;, &amp;#34;4&amp;#34;, &amp;#34;5&amp;#34;, &amp;#34;6&amp;#34;, &amp;#34; &amp;#34; }, s, awful.layout.layouts[1])
+end)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;and making &lt;code&gt;nemo-desktop&lt;/code&gt; sticky, which means it shows on all desktops&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ruled.client.append_rule {
+    id = &amp;#34;desktop&amp;#34;,
+    rule_any = {
+        class = {
+        &amp;#34;Nemo-desktop&amp;#34;
+        }
+    },
+    properties = { sticky = true, tag = &amp;#34; &amp;#34; }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;One downside (well, not really a downside for me) is that Nemo has it&amp;rsquo;s own root menu, which means you won&amp;rsquo;t be able to use your own root menu. This is fine by me because my root menu is still Awesome&amp;rsquo;s default root menu, and Nemo&amp;rsquo;s root menu is actually pretty good, integrating well with Nemo itself.&lt;/p&gt;
+&lt;p&gt;I think desktop icons are really comfy, and add a little bit of uniqueness to a rice. Hopefully this post is easy enough to follow so that you can get started adding your own desktop icons.&lt;/p&gt;
 </content>
     </item>
     

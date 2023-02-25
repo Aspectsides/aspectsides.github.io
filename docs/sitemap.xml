@@ -5,9 +5,6 @@
     <loc>/</loc>
     <lastmod>2023-02-24T16:08:41-08:00</lastmod>
   </url><url>
-    <loc>/posts/desktop_icons/</loc>
-    <lastmod>2023-02-24T16:08:41-08:00</lastmod>
-  </url><url>
     <loc>/tags/linux/</loc>
     <lastmod>2023-02-24T16:08:41-08:00</lastmod>
   </url><url>
@@ -15,9 +12,6 @@
     <lastmod>2023-02-24T16:08:41-08:00</lastmod>
   </url><url>
     <loc>/posts/</loc>
-    <lastmod>2023-02-24T16:08:41-08:00</lastmod>
-  </url><url>
-    <loc>/tags/ricing/</loc>
     <lastmod>2023-02-24T16:08:41-08:00</lastmod>
   </url><url>
     <loc>/tags/shell/</loc>
@@ -30,9 +24,6 @@
     <lastmod>2023-02-24T16:08:41-08:00</lastmod>
   </url><url>
     <loc>/tags/terminal/</loc>
-    <lastmod>2023-02-24T16:08:41-08:00</lastmod>
-  </url><url>
-    <loc>/tags/wm/</loc>
     <lastmod>2023-02-24T16:08:41-08:00</lastmod>
   </url><url>
     <loc>/tags/docker/</loc>
@@ -49,6 +40,15 @@
   </url><url>
     <loc>/tags/selfhosting/</loc>
     <lastmod>2023-02-24T15:44:09-08:00</lastmod>
+  </url><url>
+    <loc>/posts/desktop_icons/</loc>
+    <lastmod>2023-02-22T16:08:41-08:00</lastmod>
+  </url><url>
+    <loc>/tags/ricing/</loc>
+    <lastmod>2023-02-22T16:08:41-08:00</lastmod>
+  </url><url>
+    <loc>/tags/wm/</loc>
+    <lastmod>2023-02-22T16:08:41-08:00</lastmod>
   </url><url>
     <loc>/posts/notes-1/</loc>
     <lastmod>2023-01-28T12:45:41-08:00</lastmod>
