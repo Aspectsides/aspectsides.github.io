@@ -1,70 +1,201 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Aspect</title>
-    <link>https://aspectsides.github.io/posts/</link>
+    <link>/posts/</link>
     <description>Recent content in Posts on Aspect</description>
-    <image>
-      <url>https://aspectsides.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://aspectsides.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
-    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 23 Feb 2023 09:17:43 -0800</lastBuildDate><atom:link href="https://aspectsides.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Fri, 24 Feb 2023 15:44:09 -0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Self Hosting Your Own Search Engine</title>
-      <link>https://aspectsides.github.io/posts/searx/</link>
-      <pubDate>Thu, 23 Feb 2023 09:17:43 -0800</pubDate>
+      <link>/posts/searx/</link>
+      <pubDate>Fri, 24 Feb 2023 15:44:09 -0800</pubDate>
       
-      <guid>https://aspectsides.github.io/posts/searx/</guid>
+      <guid>/posts/searx/</guid>
       <description>You need to host your own search engine. Why? Because Google, Microsoft, even DuckDuckGo, who has a weird relationship with Microsoft, are all tracking you. In fact, Google itself has said that it stores more than an exabyte of your data. That&amp;rsquo;s kinda creepy. Even though most of us have nothing to hide from Google (right?), we could all do with a bit more privacy. For just ten minutes of your time, and a payment of pocket change every month, you&amp;rsquo;ll be able to host your own search engine, along with a bunch of other stuff which I will cover in future guides.</description>
+      <content>&lt;p&gt;You need to host your own search engine. Why? Because Google, Microsoft, even DuckDuckGo, who has a &lt;a href=&#34;https://www.msn.com/en-us/news/technology/duckduckgo-in-hot-water-over-hidden-tracking-agreement-with-microsoft/ar-AAXILR1&#34;&gt;weird relationship&lt;/a&gt; with Microsoft, are &lt;em&gt;all&lt;/em&gt; tracking you. In fact, Google itself has said that it stores more than an &lt;em&gt;exabyte&lt;/em&gt; of &lt;em&gt;your&lt;/em&gt; data. That&amp;rsquo;s kinda creepy. Even though most of us have nothing to hide from Google (right?), we could all do with a bit more privacy. For just ten minutes of your time, and a payment of pocket change every month, you&amp;rsquo;ll be able to host your own search engine, along with a bunch of other stuff which I will cover in future guides. The search engine we will be hosting today is a meta search engine called SearXNG, which pulls results from all the major search engines and compiles them into a list of results. Since you are self hosting it, none of your data is being leaked to Google. That is an absolute win in my opinion.&lt;/p&gt;
+&lt;h2 id=&#34;step-1-getting-a-vps&#34;&gt;Step 1: Getting a VPS&lt;/h2&gt;
+&lt;p&gt;Though you can host this on your own server, it is much easier to do so on a VPS, because most come with an IPv4 address built in, which means you won&amp;rsquo;t have to set up a reverse proxy. I will be doing this on a Digital Ocean droplet, because free student money. Getting a Digital Ocean droplet is really simple. Just sign up for a Digital Ocean account, give them all your payment info, and create a new droplet by clicking the very obvious green button in the top right. The cheapest plan will be more than enough, even if you plan to host a Nextcloud or VPN on it later. After you create your droplet, you should be able to see your droplet&amp;rsquo;s ipv4 address. In a terminal, run&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ssh root@&amp;lt;your ipv4 address&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;After entering the root password specified on setup, you should be greeted by your droplet&amp;rsquo;s terminal.&lt;/p&gt;
+&lt;h2 id=&#34;step-2-installing-dependencies&#34;&gt;Step 2: Installing Dependencies&lt;/h2&gt;
+&lt;p&gt;When setting up a new server, it&amp;rsquo;s always good practice to update the system. Run&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt update &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt upgrade
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We are going to be hosting our SearX instance through Docker, so go ahead and install that and Docker Compose with&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt install docker.io docker-compose
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You should now be all set to begin setting up SearX.&lt;/p&gt;
+&lt;h2 id=&#34;step-3-setting-up-searx&#34;&gt;Step 3: Setting Up SearX&lt;/h2&gt;
+&lt;p&gt;In your domain&amp;rsquo;s control panel, add an A record that points to your droplet&amp;rsquo;s ipv4 address. Then, SSH back into your server and download the SearX docker image.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone https://github.com/searxng/searxng-docker.git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Navigate to the directory using &lt;code&gt;cd searxng-docker&lt;/code&gt; and edit the .env file using &lt;code&gt;nano .env&lt;/code&gt;. Change the SEARX_HOSTNAME field to your domain, and the LETSENCRYPT_EMAIL to your email address. This docker image sets up an SSL certificate for you, which is pretty cool. Now, use this command to generate a private key that is then placed into your .env file.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sed -i &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;s|ultrasecretkey|&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;openssl rand -hex 32&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt; |g&amp;#34;&lt;/span&gt; searxng/settings.yml
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Finally, to run the Docker container, run&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo docker-compose up -d
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Congratulations! If you navigate to your domain now, you should see SearX sitting there, looking pretty. You&amp;rsquo;ve successfully hosted your own SearXNG instance.&lt;/p&gt;
+</content>
     </item>
     
     <item>
       <title>Desktop Icons in AwesomeWM</title>
-      <link>https://aspectsides.github.io/posts/desktop_icons/</link>
+      <link>/posts/desktop_icons/</link>
       <pubDate>Tue, 07 Feb 2023 23:06:15 -0800</pubDate>
       
-      <guid>https://aspectsides.github.io/posts/desktop_icons/</guid>
+      <guid>/posts/desktop_icons/</guid>
       <description>Yes, I know what you&amp;rsquo;re going to say. A Linux user, with desktop icons on his desktop? Blasphemy! And you&amp;rsquo;re right. It is blasphemy. I still do it, though. I mean, it&amp;rsquo;s not like my desktop looks like this.
 That&amp;rsquo;s just wrong. I believe that as long as you put only what you really need on your desktop, it&amp;rsquo;s only slightly blasphemy. This is what my AwesomeWM desktop looks like:</description>
+      <content>&lt;p&gt;Yes, I know what you&amp;rsquo;re going to say. A Linux user, with &lt;em&gt;desktop icons&lt;/em&gt; on his desktop? Blasphemy! And you&amp;rsquo;re right. It is blasphemy. I still do it, though. I mean, it&amp;rsquo;s not like my desktop looks like this.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/hell.jpg&#34; alt=&#34;hell&#34; title=&#34;Hell.&#34;&gt;&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s just wrong. I believe that as long as you put only what you really need on your desktop, it&amp;rsquo;s only slightly blasphemy. This is what my AwesomeWM desktop looks like:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/nice.png&#34; alt=&#34;nice&#34; title=&#34;Heaven.&#34;&gt;&lt;/p&gt;
+&lt;p&gt;As you can see, despite having &lt;em&gt;gags&lt;/em&gt; desktop icons on the screen, it still looks quite clean. I ran into a few snags while attempting to set up desktop icons in Awesome, so I decided to write a short blog post about the process&lt;/p&gt;
+&lt;p&gt;First things first, there are two file managers that I know of that support desktop icons out of the box, those being Nemo and PCManFM. I use Nemo, and I would use Nemo over PCManFM because it supports GTK3 as opposed to GTK2 and is still being actively maintained. Install Nemo with&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo pacman -S nemo
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Nemo comes with a nifty little command called &lt;code&gt;nemo-desktop&lt;/code&gt; which adds the contents of &lt;code&gt;~/Desktop&lt;/code&gt; to your desktop. If you run it now, desktop icons will not appear. You need to turn them on with&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gsettings set org.nemo.desktop show-desktop-icons true
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I would recommend putting &lt;code&gt;nemo-desktop&lt;/code&gt; in your startup script for convenience sake. The problem with using Awesome with this is that it treats &lt;code&gt;nemo-desktop&lt;/code&gt; as any other client, which means it can only be available on one tag, and not any others. I fixed this by adding a ghost tag that is not visible on the taglist as follows&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;screen.connect_signal(&amp;#34;request::desktop_decoration&amp;#34;, function(s)
+	awful.tag({ &amp;#34;1&amp;#34;, &amp;#34;2&amp;#34;, &amp;#34;3&amp;#34;, &amp;#34;4&amp;#34;, &amp;#34;5&amp;#34;, &amp;#34;6&amp;#34;, &amp;#34; &amp;#34; }, s, awful.layout.layouts[1])
+end)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;and making &lt;code&gt;nemo-desktop&lt;/code&gt; sticky, which means it shows on all desktops&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ruled.client.append_rule {
+    id = &amp;#34;desktop&amp;#34;,
+    rule_any = {
+        class = {
+        &amp;#34;Nemo-desktop&amp;#34;
+        }
+    },
+    properties = { sticky = true, tag = &amp;#34; &amp;#34; }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;One downside (well, not really a downside for me) is that Nemo has it&amp;rsquo;s own root menu, which means you won&amp;rsquo;t be able to use your own root menu. This is fine by me because my root menu is still Awesome&amp;rsquo;s default root menu, and Nemo&amp;rsquo;s root menu is actually pretty good, integrating well with Nemo itself.&lt;/p&gt;
+&lt;p&gt;I think desktop icons are really comfy, and add a little bit of uniqueness to a rice. Hopefully this post is easy enough to follow so that you can get started adding your own desktop icons.&lt;/p&gt;
+</content>
     </item>
     
     <item>
       <title>Setting up Neovim for Editing LaTeX</title>
-      <link>https://aspectsides.github.io/posts/notes-1/</link>
+      <link>/posts/notes-1/</link>
       <pubDate>Sat, 28 Jan 2023 12:45:41 -0800</pubDate>
       
-      <guid>https://aspectsides.github.io/posts/notes-1/</guid>
+      <guid>/posts/notes-1/</guid>
       <description>This is the first article in a three part series in which I discuss how I write math notes with LaTeX and Neovim.
 Why I Started Using LaTeX One thing I&amp;rsquo;ve always recognized about myself is that I have terrible handwriting. Problem is, I&amp;rsquo;m a math major. I kinda need to be able to read my lecture notes later so I don&amp;rsquo;t fail the class. That&amp;rsquo;s when I discovered this blog post by Gilles Castel.</description>
+      <content>&lt;p&gt;This is the first article in a three part series in which I discuss how I write math notes with LaTeX and Neovim.&lt;/p&gt;
+&lt;h2 id=&#34;why-i-started-using-latex&#34;&gt;Why I Started Using LaTeX&lt;/h2&gt;
+&lt;p&gt;One thing I&amp;rsquo;ve always recognized about myself is that I have terrible handwriting. Problem is, I&amp;rsquo;m a math major. I kinda need to be able to read my lecture notes later so I don&amp;rsquo;t fail the class. That&amp;rsquo;s when I discovered &lt;a href=&#34;https://castel.dev/post/lecture-notes-1/&#34;&gt;this&lt;/a&gt; blog post by Gilles Castel. It introduced me to the magic of Neovim combined with LaTeX. It took me a while to learn, but after becoming proficient in LaTeX i find that I can take much more readable math notes as well as being able to type them up faster than all my clasmates. They think I&amp;rsquo;m a wizard.&lt;/p&gt;
+&lt;h2 id=&#34;setting-up-neovim&#34;&gt;Setting up Neovim&lt;/h2&gt;
+&lt;p&gt;Here is what my screen looks like when I&amp;rsquo;m writing LaTeX notes:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/latex1.png&#34; alt=&#34;Latex&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The window on the left is Neovim configured with a few plugins that enhance the LaTeX experience. The window on the left is Zathura, my PDF reader that updates whenever I recompile my LaTeX file by saving it.&lt;/p&gt;
+&lt;p&gt;I use my own Neovim configuration written in Lua. You can get it over on my &lt;a href=&#34;https://github.com/aspectsides/archfiles&#34;&gt;Github&lt;/a&gt;. Configuring Neovim from scratch is very time consuming, so if you just want to get started with LaTeX you can steal my config.&lt;/p&gt;
+&lt;h3 id=&#34;plugins&#34;&gt;Plugins&lt;/h3&gt;
+&lt;p&gt;There are a few choice plugins that I find greatly enhances my efficiency whenever I&amp;rsquo;m typing LaTeX. The first is &lt;a href=&#34;https://github.com/lervag/vimtex&#34;&gt;vimtex&lt;/a&gt;. You can install this plugin using your preferred package manager. I use &lt;a href=&#34;https://github.com/wbthomason/packer.nvim&#34;&gt;packer&lt;/a&gt;, so I put&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;use &amp;#39;lervag/vimtex&amp;#39;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;in my &lt;code&gt;plugins.lua&lt;/code&gt;. VimTex is a filetype plugin for .tex files that makes it much easier to actively compile LaTeX files in Neovim. Simply run &lt;code&gt;:VimtexCompile&lt;/code&gt; while in a LaTeX file and you should see your default PDF reader open with the compiled PDF. I bound this to &lt;code&gt;&amp;lt;leader&amp;gt;ll&lt;/code&gt; for easier access.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;keymap(&amp;#34;n&amp;#34;, &amp;#34;&amp;lt;leader&amp;gt;ll&amp;#34;, &amp;#34;:VimtexCompile&amp;lt;CR&amp;gt;&amp;#34;, opts)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The second plugin that I use is a snippets plugin called &lt;a href=&#34;https://github.com/L3MON4D3/LuaSnip&#34;&gt;LuaSnip&lt;/a&gt;. In Gilles Castel&amp;rsquo;s article, he uses UltiSnips, which is written in Vimscript. You can use either, but I prefer Luasnip because the rest of my config is written in Lua. Install LuaSnip with&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;use &amp;#39;L3MON4D3/LuaSnip&amp;#39;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Luasnip allows me to type otherwise complicated Lua functions with only a few keypresses. For example, &lt;code&gt;beg&lt;/code&gt; expands to&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;\begin{}
+  
+\end{}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;These various snippets are ported over from Gilles&amp;rsquo; UltiSnips and are packaged at a repository over on &lt;a href=&#34;https://github.com/iurimateus/luasnip-latex-snippets.nvim&#34;&gt;Github&lt;/a&gt;. Install them with&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;use &amp;#39;iurimateus/luasnip-latex-snippets.nvim&amp;#39;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now that you have set up Neovim to work well with LaTeX, it&amp;rsquo;s time to start learning the language. In the next part of this series, I will go over the basics of LaTeX and a few tricks I use involving VimTex and snippets. Now go learn some LaTeX.&lt;/p&gt;
+</content>
     </item>
     
     <item>
       <title>Org Roam</title>
-      <link>https://aspectsides.github.io/posts/orgroam/</link>
+      <link>/posts/orgroam/</link>
       <pubDate>Mon, 23 Jan 2023 23:59:31 -0800</pubDate>
       
-      <guid>https://aspectsides.github.io/posts/orgroam/</guid>
+      <guid>/posts/orgroam/</guid>
       <description>Org Roam; The New best Notetaking Software for the Zettelkasten method Why not Obsidian? or Vimwiki? I have hopped notetaking software more times than I can count. When I first had the need to take notes, I did them in Google Docs and saved them to Google Drive. This was terrible, and I have no idea what by 13 year old self was doing. When I got slightly older and wiser, I discovered Evernote and transitioned over to that.</description>
+      <content>&lt;h1 id=&#34;org-roam-the-new-best-notetaking-software-for-the-zettelkasten-method&#34;&gt;Org Roam; The New best Notetaking Software for the Zettelkasten method&lt;/h1&gt;
+&lt;h2 id=&#34;why-not-obsidian-or-vimwiki&#34;&gt;Why not Obsidian? or Vimwiki?&lt;/h2&gt;
+&lt;p&gt;I have hopped notetaking software more times than I can count. When I first had the need to take notes, I did them in Google Docs and saved them to Google Drive. This was terrible, and I have no idea what by 13 year old self was doing. When I got slightly older and wiser, I discovered Evernote and transitioned over to that. And Evernote was… fine. I have nothing negative to say about Evernote. Problem is, it’s basically a glorified file manager that opens plain text files. And I didn’t like that. Also, at this point, I was getting into the concept of building my own second brain, which requires the linking together of notes. And Evernote didn’t have any intuitive way to do this. So I switched over to Notion. Then Obsidian. I really don’t have anything negative to say about those either except that they are Electron apps, and don’t have Vim keybindings which I was becoming increasingly reliant on those days. Then I found Vimwiki. It had everything that I wanted except for a visualizer for my second brain. I used it for a while but I needed to flex that second brain visualizer. That’s when I found Org Roam.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-org-roam&#34;&gt;What is Org Roam?&lt;/h2&gt;
+&lt;p&gt;Org roam is a replica of Roam Research for Emacs and Org Mode. It encourages the linking together of ideas and notes, and is a great tool for building your personal second brain. It comes with all the benefits and power of Org-Mode, but adds an extra layer of usability and ease of linking to your documents. Let’s get started with installing it.&lt;/p&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Disclaimer: I use a distribution of Emacs called Doom Emacs, so the following steps will be tailored for Doom.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;To install Org-Roam on Doom Emacs, in your init.el look for the line that says &lt;code&gt;org&lt;/code&gt;. Then, change it to &lt;code&gt;(org +roam2)&lt;/code&gt;. Run &lt;code&gt;doom sync&lt;/code&gt; in your shell to reload Doom, and you should have org roam installed. There is one more thing we have to do before we start off with using Org Roam though. In your config.el, add the following line:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;(setq org-roam-directory &amp;quot;~/Documents/roam&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Obviously, change the directory to whatever directory you would like your roam to be stored in. Make sure the directory exists first, though.&lt;/p&gt;
+&lt;h2 id=&#34;using-org-roam&#34;&gt;Using Org Roam&lt;/h2&gt;
+&lt;p&gt;To create your first note, you can hit &lt;code&gt;&amp;lt;space&amp;gt; nrn&lt;/code&gt; in Doom with evil keybindings. After Emacs compiles the sql database required to run Org Roam, it will open the file for you. Org Roam notes follow Org Mode syntax, so everything you can do in Org Mode is doable in Org Roam. Try adding some content to your file. In order to link to another note or create another note and link to it, you can press &lt;code&gt;&amp;lt;space&amp;gt; nri&lt;/code&gt;. Type the name of the desired note and press enter. Emacs will open the note in a split which you can then finalize and insert by pressing &lt;code&gt;ctrl-c ctrl-c&lt;/code&gt;. To find and open a note, you can use the key combination &lt;code&gt;&amp;lt;space&amp;gt; nrf&lt;/code&gt;. This allows you to search through all your notes.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;This is a very barebones guide on what I think is the most powerful tool in my daily workflow right now. I will make additional articles about my workflow and the extensions I use to make my experience even more awesome, but for now I just wanted to get this out here. I’m officially an Emacs user again.&lt;/p&gt;
+</content>
     </item>
     
     <item>
       <title>Vimwiki</title>
-      <link>https://aspectsides.github.io/posts/vimwiki/</link>
+      <link>/posts/vimwiki/</link>
       <pubDate>Sun, 22 Jan 2023 23:43:35 -0800</pubDate>
       
-      <guid>https://aspectsides.github.io/posts/vimwiki/</guid>
+      <guid>/posts/vimwiki/</guid>
       <description>Why Vimwiki is the Best Notetaking Sofware What is Vimwiki? It&amp;rsquo;s a bit difficult to explain Vimwiki, but at its core, Vimwiki is a notetaking plugin for Vim that allows you to make your own personal wiki. It&amp;rsquo;s really easy to organize notes and create links between them. You can do so many things with Vimwiki, and Vimwiki has all but replaced Emacs Org Mode for me, as it is now much easier to organize my notes with Vimwiki than just shove all of my Org files in a directory in my home folder.</description>
+      <content>&lt;h1 id=&#34;why-vimwiki-is-the-best-notetaking-sofware&#34;&gt;Why Vimwiki is the Best Notetaking Sofware&lt;/h1&gt;
+&lt;h2 id=&#34;what-is-vimwiki&#34;&gt;What is Vimwiki?&lt;/h2&gt;
+&lt;p&gt;It&amp;rsquo;s a bit difficult to explain Vimwiki, but at its core, Vimwiki is a notetaking plugin for Vim that allows you to make your own personal wiki. It&amp;rsquo;s really easy to organize notes and create links between them. You can do so many things with Vimwiki, and Vimwiki has all but replaced Emacs Org Mode for me, as it is now much easier to organize my notes with Vimwiki than just shove all of my Org files in a directory in my home folder.
+=&amp;gt; &lt;a href=&#34;https://github.com/vimwiki/vimwiki&#34;&gt;https://github.com/vimwiki/vimwiki&lt;/a&gt; Vimwiki Github&lt;/p&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;p&gt;Vimwiki was made for Vim, and as far as I know, it does not officially support Neovim yet. You can still use it with Neovim, though. To install Vimwiki on Neovim, simply plug &amp;ldquo;vimwiki/vimwiki&amp;rdquo; into your package manager. For example, with Packer, it looks something like this:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;use {&amp;#39;vimwiki/vimwiki&amp;#39;}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;However, this installs Vimwiki with its default syntax, which is this weird version of Markdown that I really don&amp;rsquo;t like. So, I put this in my &lt;code&gt;plugins.lua&lt;/code&gt;:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;  use {
+      &amp;#39;vimwiki/vimwiki&amp;#39;,
+      config = function()
+          vim.g.vimwiki_list = {
+              {
+                  path = &amp;#39;/home/$USER/Documents/vimwiki&amp;#39;,
+                  syntax = &amp;#39;markdown&amp;#39;,
+                  ext = &amp;#39;.md&amp;#39;,
+              }
+          }
+      end
+  }
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This changes the syntax for files created using Vimwiki to Markdown syntax, as well as changing the file extensions to &lt;code&gt;.md&lt;/code&gt;. It also changes your Vimwiki&amp;rsquo;s location from the default ~/vimwiki to a folder in your Documents directory named Vimwiki. Much better. To finish the installation, restart Neovim.&lt;/p&gt;
+&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;h3 id=&#34;creating-indexmd-and-a-new-note&#34;&gt;Creating Index.md and a new note.&lt;/h3&gt;
+&lt;p&gt;In order to open your &lt;code&gt;index.md&lt;/code&gt; file, which is sort of like the home page for your Vimwiki, the default keybinding is &lt;code&gt;&amp;lt;leader&amp;gt; ww&lt;/code&gt;. This will create an &lt;code&gt;index.wiki&lt;/code&gt; file in the specified path, which in our case is &lt;code&gt;Documents/wimwiki&lt;/code&gt;. This document will be blank since you haven&amp;rsquo;t put anything in it yet, so lets change that. In order to create a new Vimwiki page, simply type the title of the page, highlight the title, go into normal mode, and press the return key. That converts the selected text into a link and creates a new document with the specified title.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[Quick Notes](Quick Notes)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Press enter again to jump to the newly created document. At this point, you can just write whatever you want in markdown and :w to save.&lt;/p&gt;
+&lt;h3 id=&#34;todo-lists&#34;&gt;Todo Lists&lt;/h3&gt;
+&lt;p&gt;Todo lists are incredibly convenient to manage in Vimwiki. Just create a new note named &lt;code&gt;Todo&lt;/code&gt;. To create a todo list in your newly created document, put your todo in this syntax.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;* [ ] Write a blog post about Vimwiki.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now every time you press return, a new todo will automatically be created for you. I suggest following the rules for a &lt;code&gt;todo.txt&lt;/code&gt; file just because that&amp;rsquo;s what I do, but organize your todos however you like. In order to mark a todo as done, simply hit &lt;code&gt;ctrl-space&lt;/code&gt; while in normal mode with your cursor on the todo entry.&lt;/p&gt;
+&lt;p&gt;These are the only two features of Vimwiki that I actually use, so those will be the only ones I&amp;rsquo;m covering in this post, but there is another really cool feature in Vimwiki called diary. Brodie Robertson has a superb video covering this feature on his
+=&amp;gt; &lt;a href=&#34;https://www.youtube.com/watch?v=FsX3SpHiuYw&#34;&gt;https://www.youtube.com/watch?v=FsX3SpHiuYw&lt;/a&gt; Youtube channel&lt;/p&gt;
+&lt;h2 id=&#34;final-thoughts&#34;&gt;Final Thoughts&lt;/h2&gt;
+&lt;p&gt;Vimwiki is a superb note taking sofware, and I&amp;rsquo;m basically using it full-time now for everything from school to todo to blog posts to jotting down quick notes. In fact, I&amp;rsquo;m writing this blog post in it right now. It&amp;rsquo;s just so convenient for me, and I suggest you try it out as well.&lt;/p&gt;
+</content>
     </item>
     
     <item>
       <title>Catppuccin</title>
-      <link>https://aspectsides.github.io/posts/catppuccin/</link>
+      <link>/posts/catppuccin/</link>
       <pubDate>Sun, 22 Jan 2023 23:20:06 -0800</pubDate>
       
-      <guid>https://aspectsides.github.io/posts/catppuccin/</guid>
+      <guid>/posts/catppuccin/</guid>
       <description>Catppuccin: My Favorite Colorscheme Catppuccin is a relatively new colorscheme. Released just about a year ago, Catppuccin has quickly grown to be one of the most popular colorschemes, up there with Gruvbox and Nord, my other two favorite colorschemes that I have used in the past. There are a few things that set Catppuccin apart from the rest, though.
 1. It&amp;rsquo;s colorful. My two favorite colorschemes of all time are Nord and Catppuccin.</description>
+      <content>&lt;h1 id=&#34;catppuccin-my-favorite-colorscheme&#34;&gt;Catppuccin: My Favorite Colorscheme&lt;/h1&gt;
+&lt;p&gt;Catppuccin is a relatively new colorscheme. Released just about a year ago, Catppuccin has quickly grown to be one of the most popular colorschemes, up there with Gruvbox and Nord, my other two favorite colorschemes that I have used in the past. There are a few things that set Catppuccin apart from the rest, though.&lt;/p&gt;
+&lt;h2 id=&#34;1-its-colorful&#34;&gt;1. It&amp;rsquo;s colorful.&lt;/h2&gt;
+&lt;p&gt;My two favorite colorschemes of all time are Nord and Catppuccin. What gives Catppuccin the edge over Nord in my opinion, though, is that it&amp;rsquo;s very colorful. In fact, that&amp;rsquo;s one of Catppuccin&amp;rsquo;s core values; color is better than no color. Or something like that. Nord, on the other hand, is relatively colorless. I absolutely love Nord&amp;rsquo;s background color, but the other colors in the pallete just don&amp;rsquo;t pop out to me as much. After about a year of daily driving a Nord machine, I came to realize; Nord is slightly depressing. It&amp;rsquo;s still a great colorscheme, it just lacks in color. If Catppuccin didn&amp;rsquo;t have as much color as it does, I would use Nord.&lt;/p&gt;
+&lt;h2 id=&#34;2-a-huge-selection-of-ports&#34;&gt;2. A huge selection of ports.&lt;/h2&gt;
+&lt;p&gt;Catppuccin has, as far as I know, the most official ports out of any colorscheme other than Dracula and Solarized, coming in at a whopping total of 170 ports. Most of these ports are maintained by the community, but they all follow the same basic color pallete. There are Catppuccin ports for Neovim, Emacs, Polybar, Alacritty, even ST. Any program that you use, there&amp;rsquo;s likely a Catppuccin port for it, found over on the official Catppuccin repository over at
+=&amp;gt; &lt;a href=&#34;https://github.com/catppuccin/catppuccin&#34;&gt;https://github.com/catppuccin/catppuccin&lt;/a&gt; the Catppuccin GitHub page&lt;/p&gt;
+&lt;h2 id=&#34;3-different-flavors-based-on-your-preferences&#34;&gt;3. Different flavors based on your preferences.&lt;/h2&gt;
+&lt;p&gt;Catppuccin has four official flavors, the aptly named Mocha, Macchiato, Frappe, and Latte, ordered from darkest to lightest. Mocha, Macchiato and Frappe are the dark themes, while Frappe is Catppuccin&amp;rsquo;s light theme. I really love Mocha&amp;rsquo;s color pallete, and it&amp;rsquo;s what I&amp;rsquo;m using on my system right now. It has a really nice dark blue background, and is contrasty enough to be easy to read but also extremely nice to look at. There are also some community flavors such as Oledpuccin, which is Catppuccin except black for OLED screens. It looks very nice, but I don&amp;rsquo;t have an OLED screen so I will probably never use it.&lt;/p&gt;
+&lt;h2 id=&#34;4-a-large-variety-of-accent-colors&#34;&gt;4. A large variety of accent colors.&lt;/h2&gt;
+&lt;p&gt;To add your own personal pop to Catppuccin, you can choose from one of 14 accent colors, ranging from rosewater to teal to blue to muave to lavender. My favorite accent color is the basic blue, though lavender is extremely nice as well.&lt;/p&gt;
+&lt;h2 id=&#34;5-a-very-active-community&#34;&gt;5. A very active community.&lt;/h2&gt;
+&lt;p&gt;Unlike other colorschemes, Catppuccin&amp;rsquo;s community is still very much active and is spitting out new ports. It&amp;rsquo;s really easy to contribute to Catppuccin too, all you need to do is make a pull request on their Github.&lt;/p&gt;
+</content>
     </item>
     
   </channel>
