@@ -6,7 +6,57 @@
     <description>Recent content on Aspect</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Feb 2023 16:08:41 -0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Feb 2023 14:00:53 -0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Self Hosting a Media Server with Jellyfin</title>
+      <link>/posts/jellyfin/</link>
+      <pubDate>Sun, 26 Feb 2023 14:00:53 -0800</pubDate>
+      
+      <guid>/posts/jellyfin/</guid>
+      <description>Introduction With the rise of streaming services such as Netflix and Hulu, it might seem like owning a physical media collection is a thing of the past. However, for many people, owning and managing their own collection of movies, TV shows, and music is still an important part of their media consumption. If you&amp;rsquo;re one of these people, you might be interested in self-hosting a media server. In this blog post, we&amp;rsquo;ll be discussing Jellyfin, a free and open-source media server that you can use to host your own media collection.</description>
+      <content>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;With the rise of streaming services such as Netflix and Hulu, it might seem like owning a physical media collection is a thing of the past. However, for many people, owning and managing their own collection of movies, TV shows, and music is still an important part of their media consumption. If you&amp;rsquo;re one of these people, you might be interested in self-hosting a media server. In this blog post, we&amp;rsquo;ll be discussing Jellyfin, a free and open-source media server that you can use to host your own media collection.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-jellyfin&#34;&gt;What is Jellyfin?&lt;/h2&gt;
+&lt;p&gt;Jellyfin is a media server that allows you to stream your own media collection to a variety of devices. It is free and open-source, which means that anyone can download and use it without paying anything. One of the great things about Jellyfin is that it is completely customizable. You can choose which media formats are supported, which devices can access your server, and even customize the look and feel of the user interface.&lt;/p&gt;
+&lt;h2 id=&#34;setting-up-jellyfin&#34;&gt;Setting up Jellyfin&lt;/h2&gt;
+&lt;p&gt;Setting up Jellyfin is relatively simple. First, you&amp;rsquo;ll need a computer running Linux. My server is running Ubuntu Server Edition, mainly because I’m just too lazy to install anything else. If you haven’t already, you’ll also need to install Docker. Run&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt update &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt upgrade
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt-get install docker.io -y
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt-get install docker-compose -y
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will update your system and install both Docker Community Edition and Docker-Compose, which is a really handy tool for writing more complex Docker commands.&lt;/p&gt;
+&lt;p&gt;Next, you’ll want to create directories to store your media collection in. I have a directory called media in my home directory, in which I created two folders; movies and shows.&lt;/p&gt;
+&lt;p&gt;Now, in a directory of your choice, create a file called &lt;code&gt;docker-compose.yml&lt;/code&gt; and paste this in there:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;version&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2.1&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;services&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;jellyfin&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;image&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;lscr.io/linuxserver/jellyfin:latest&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;container_name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;jellyfin&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;environment&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;PUID=1000&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;PGID=1000&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;TZ=Etc/UTC&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;JELLYFIN_PublishedServerUrl=192.168.0.5&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;#optional&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;volumes&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;/path/to/library:/config&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;/path/to/tvseries:/data/tvshows&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;/path/to/movies:/data/movies&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;ports&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;8096&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;8096&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;8920&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;8920&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;#optional&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;7359&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;7359&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;/udp&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;#optional&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;1900&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;1900&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;/udp&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;#optional&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;restart&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;unless-stopped    &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Replace “user” in the media volume with your username. Now, in the same directory, run&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo docker-compose up -d
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Your Jellyfin instance should now be accessible at &amp;lt;your server’s ip address&amp;gt;:8096.&lt;/p&gt;
+&lt;h2 id=&#34;using-jellyfin&#34;&gt;Using Jellyfin&lt;/h2&gt;
+&lt;p&gt;Once you&amp;rsquo;ve set up Jellyfin, you can start streaming your media collection to your devices. You can access your media server through a web browser by going to the aforementioned url, or by downloading one of the many Jellyfin apps that are available for different devices. With Jellyfin, you can stream your media to a variety of devices, including smartphones, tablets, smart TVs, and even gaming consoles. You can also customize the user interface to make it look and feel the way you want it to.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Self-hosting a media server with Jellyfin is a great way to take control of your media collection. With Jellyfin, you can stream your media to a variety of devices, and customize the server settings to fit your needs. If you&amp;rsquo;re interested in self-hosting a media server, Jellyfin is definitely worth checking out. Best of all, it&amp;rsquo;s completely free and open-source, so you can try it out without any financial commitment.&lt;/p&gt;
+</content>
+    </item>
+    
     <item>
       <title>Switching to Hilbish</title>
       <link>/posts/hilbish/</link>
