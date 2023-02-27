@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>selfhost on Aspect</title>
+    <link>/tags/selfhost/</link>
+    <description>Recent content in selfhost on Aspect</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 26 Feb 2023 21:15:48 -0800</lastBuildDate><atom:link href="/tags/selfhost/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pi-Hole: Blocking Ads at the Network Level with Docker</title>
+      <link>/posts/pihole/</link>
+      <pubDate>Sun, 26 Feb 2023 21:15:48 -0800</pubDate>
+      
+      <guid>/posts/pihole/</guid>
+      <description>Introduction If you&amp;rsquo;re tired of seeing ads on your devices while browsing the internet, Pi-Hole might be the solution you&amp;rsquo;re looking for. Pi-Hole is a network-level ad and tracker blocker that blocks ads and trackers before they even reach your device. It works by redirecting DNS requests to a black hole, preventing ads and trackers from loading. In this post, we&amp;rsquo;ll learn how to set up Pi-Hole using Docker.
+What is Docker?</description>
+      <content>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;If you&amp;rsquo;re tired of seeing ads on your devices while browsing the internet, Pi-Hole might be the solution you&amp;rsquo;re looking for. Pi-Hole is a network-level ad and tracker blocker that blocks ads and trackers before they even reach your device. It works by redirecting DNS requests to a black hole, preventing ads and trackers from loading. In this post, we&amp;rsquo;ll learn how to set up Pi-Hole using Docker.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-docker&#34;&gt;What is Docker?&lt;/h2&gt;
+&lt;p&gt;Docker is an open-source platform that allows developers to package applications into containers. Containers are lightweight, self-contained environments that can run anywhere, making it easy to deploy applications. Docker is widely used in the industry to deploy and manage applications, and it can be used to set up Pi-Hole as well.&lt;/p&gt;
+&lt;h2 id=&#34;setting-up-pi-hole-with-docker&#34;&gt;Setting up Pi-Hole with Docker&lt;/h2&gt;
+&lt;p&gt;To set up Pi-Hole with Docker, you&amp;rsquo;ll need to have Docker installed on your machine. Once you have Docker installed, you can run the following command to download and run the Pi-Hole Docker container:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker run -d &lt;span style=&#34;color:#ae81ff&#34;&gt;\\&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    --name pihole &lt;span style=&#34;color:#ae81ff&#34;&gt;\\&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    -p 53:53/tcp -p 53:53/udp &lt;span style=&#34;color:#ae81ff&#34;&gt;\\&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    -p 80:80 &lt;span style=&#34;color:#ae81ff&#34;&gt;\\&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    -p 443:443 &lt;span style=&#34;color:#ae81ff&#34;&gt;\\&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    -e TZ&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;America/New_York&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\\&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    -e WEBPASSWORD&lt;span style=&#34;color:#f92672&#34;&gt;={&lt;/span&gt;password&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\\&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    -v &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/etc/pihole/:/etc/pihole/&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\\&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    -v &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/etc/localtime:/etc/localtime:ro&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\\&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    --restart&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;unless-stopped &lt;span style=&#34;color:#ae81ff&#34;&gt;\\&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    pihole/pihole:latest
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This command will download and run the latest version of the Pi-Hole Docker container. It will also map the necessary ports and volumes, set the time zone, and set the web password. Make sure to replace &lt;code&gt;{password}&lt;/code&gt; with a strong password.&lt;/p&gt;
+&lt;p&gt;Once the container is running, you can access the Pi-Hole web interface by going to &lt;code&gt;http://&amp;lt;docker-host-ip&amp;gt;/admin&lt;/code&gt;. You should see the Pi-Hole dashboard, which will show you the number of blocked ads and trackers.&lt;/p&gt;
+&lt;h2 id=&#34;blocklists&#34;&gt;Blocklists&lt;/h2&gt;
+&lt;p&gt;Blocklists are an essential component of Pi-Hole, as they allow the software to block unwanted connections to your network. These blocklists are essentially lists of domains that are known to be associated with adware, malware, and other unwanted connections that can slow down your network and compromise your security.&lt;/p&gt;
+&lt;p&gt;One popular blocklist that many Pi-Hole users rely on is Oisd. This blocklist contains a vast number of domains that have been identified as sources of unwanted connections, making it a comprehensive and effective option for those looking to protect their network. You can find Oisd at &lt;a href=&#34;https://big.oisd.nl/domains&#34;&gt;https://big.oisd.nl/domains&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;While Oisd is an excellent choice for many users, some may choose to add additional blocklists to further enhance their network&amp;rsquo;s security. It&amp;rsquo;s important to note, however, that adding too many blocklists can cause Pi-Hole to become less effective, as it may end up blocking legitimate connections along with unwanted ones. Therefore, it&amp;rsquo;s essential to find the right balance of blocklists that works best for your particular network.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Pi-Hole is a powerful ad and tracker blocker that can help you protect your privacy and block annoying ads. By setting it up with Docker, you can easily deploy and manage Pi-Hole on your network. Give it a try and enjoy a cleaner, faster browsing experience!&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

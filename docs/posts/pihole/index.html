@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Pi-Hole: Blocking Ads at the Network Level with Docker :: Aspect</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ADS BEGONE!" />
+<meta name="keywords" content=", " />
+<meta name="robots" content="noodp" />
+
+<link rel="canonical" href="/posts/pihole/" />
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/styles.css">
+
+
+
+
+
+
+
+  <link rel="shortcut icon" href="/img/theme-colors/blue.png">
+  <link rel="apple-touch-icon" href="/img/theme-colors/blue.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Pi-Hole: Blocking Ads at the Network Level with Docker">
+<meta property="og:description" content="ADS BEGONE!" />
+<meta property="og:url" content="/posts/pihole/" />
+<meta property="og:site_name" content="Aspect" />
+
+  
+  
+  <meta property="og:image" content="/pihole.webp">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+  <meta property="article:published_time" content="2023-02-26 21:15:48 -0800 PST" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="blue">
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Aspect
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="/posts/pihole/">Pi-Hole: Blocking Ads at the Network Level with Docker</a>
+  </h1>
+  <div class="post-meta">
+    
+      <time class="post-date">
+        2023-02-26 ::
+        
+      </time>
+    
+    
+      <span class="post-author">Daniel Xu</span>
+    
+    
+  </div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="/tags/pihole/">pihole</a>&nbsp;
+      
+      #<a href="/tags/selfhost/">selfhost</a>&nbsp;
+      
+    </span>
+  
+  
+  <img src="/pihole.webp"
+    class="post-cover"
+    alt="Pi-Hole: Blocking Ads at the Network Level with Docker"
+    title="Cover Image" />
+
+
+  
+
+  <div class="post-content"><div>
+        <h2 id="introduction">Introduction<a href="#introduction" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>If you&rsquo;re tired of seeing ads on your devices while browsing the internet, Pi-Hole might be the solution you&rsquo;re looking for. Pi-Hole is a network-level ad and tracker blocker that blocks ads and trackers before they even reach your device. It works by redirecting DNS requests to a black hole, preventing ads and trackers from loading. In this post, we&rsquo;ll learn how to set up Pi-Hole using Docker.</p>
+<h2 id="what-is-docker">What is Docker?<a href="#what-is-docker" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>Docker is an open-source platform that allows developers to package applications into containers. Containers are lightweight, self-contained environments that can run anywhere, making it easy to deploy applications. Docker is widely used in the industry to deploy and manage applications, and it can be used to set up Pi-Hole as well.</p>
+<h2 id="setting-up-pi-hole-with-docker">Setting up Pi-Hole with Docker<a href="#setting-up-pi-hole-with-docker" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>To set up Pi-Hole with Docker, you&rsquo;ll need to have Docker installed on your machine. Once you have Docker installed, you can run the following command to download and run the Pi-Hole Docker container:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker run -d <span style="color:#ae81ff">\\</span>
+</span></span><span style="display:flex;"><span>    --name pihole <span style="color:#ae81ff">\\</span>
+</span></span><span style="display:flex;"><span>    -p 53:53/tcp -p 53:53/udp <span style="color:#ae81ff">\\</span>
+</span></span><span style="display:flex;"><span>    -p 80:80 <span style="color:#ae81ff">\\</span>
+</span></span><span style="display:flex;"><span>    -p 443:443 <span style="color:#ae81ff">\\</span>
+</span></span><span style="display:flex;"><span>    -e TZ<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;America/New_York&#34;</span> <span style="color:#ae81ff">\\</span>
+</span></span><span style="display:flex;"><span>    -e WEBPASSWORD<span style="color:#f92672">={</span>password<span style="color:#f92672">}</span> <span style="color:#ae81ff">\\</span>
+</span></span><span style="display:flex;"><span>    -v <span style="color:#e6db74">&#34;/etc/pihole/:/etc/pihole/&#34;</span> <span style="color:#ae81ff">\\</span>
+</span></span><span style="display:flex;"><span>    -v <span style="color:#e6db74">&#34;/etc/localtime:/etc/localtime:ro&#34;</span> <span style="color:#ae81ff">\\</span>
+</span></span><span style="display:flex;"><span>    --restart<span style="color:#f92672">=</span>unless-stopped <span style="color:#ae81ff">\\</span>
+</span></span><span style="display:flex;"><span>    pihole/pihole:latest
+</span></span></code></pre></div><p>This command will download and run the latest version of the Pi-Hole Docker container. It will also map the necessary ports and volumes, set the time zone, and set the web password. Make sure to replace <code>{password}</code> with a strong password.</p>
+<p>Once the container is running, you can access the Pi-Hole web interface by going to <code>http://&lt;docker-host-ip&gt;/admin</code>. You should see the Pi-Hole dashboard, which will show you the number of blocked ads and trackers.</p>
+<h2 id="blocklists">Blocklists<a href="#blocklists" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>Blocklists are an essential component of Pi-Hole, as they allow the software to block unwanted connections to your network. These blocklists are essentially lists of domains that are known to be associated with adware, malware, and other unwanted connections that can slow down your network and compromise your security.</p>
+<p>One popular blocklist that many Pi-Hole users rely on is Oisd. This blocklist contains a vast number of domains that have been identified as sources of unwanted connections, making it a comprehensive and effective option for those looking to protect their network. You can find Oisd at <a href="https://big.oisd.nl/domains">https://big.oisd.nl/domains</a>.</p>
+<p>While Oisd is an excellent choice for many users, some may choose to add additional blocklists to further enhance their network&rsquo;s security. It&rsquo;s important to note, however, that adding too many blocklists can cause Pi-Hole to become less effective, as it may end up blocking legitimate connections along with unwanted ones. Therefore, it&rsquo;s essential to find the right balance of blocklists that works best for your particular network.</p>
+<h2 id="conclusion">Conclusion<a href="#conclusion" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>Pi-Hole is a powerful ad and tracker blocker that can help you protect your privacy and block annoying ads. By setting it up with Docker, you can easily deploy and manage Pi-Hole on your network. Give it a try and enjoy a cleaner, faster browsing experience!</p>
+
+      </div></div>
+
+  
+    
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        
+        <span class="button next">
+            <a href="/posts/jellyfin/">
+                <span class="button__text">Self Hosting a Media Server with Jellyfin</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2023 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/bundle.min.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
