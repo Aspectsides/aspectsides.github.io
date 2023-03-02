@@ -14,7 +14,7 @@ Output:
 Position: Student in San Francisco (anything further would be doxxing myself)
 Languages: Lua, C++, Bash, JavaScript, Python
 Interests: Linux, Selfhosting, Music, Biking
-Github: https://github.com/Aspectsides
+Gitlab: https://gitlab.com/aspectsidesxyz
 Fediverse: https://tilde.zone/@aspect
 ```
 ```shell
