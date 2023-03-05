@@ -38,4 +38,7 @@ languages:
       - identifier: about
         name: About
         url: /about
+      - identifier: projects
+        Name: Projects
+        url: /projects
 

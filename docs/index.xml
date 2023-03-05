@@ -8,6 +8,33 @@
     <language>en-us</language>
     <lastBuildDate>Sun, 26 Feb 2023 21:15:48 -0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Projects</title>
+      <link>/projects/</link>
+      <pubDate>Sat, 04 Mar 2023 20:14:36 -0800</pubDate>
+      
+      <guid>/projects/</guid>
+      <description>Linux NvSpeed: A fast, configurable, and good looking Neovim configuration. My Dotfiles: My Linux dotfiles for the Sway Wayland compositor. Web Gemini Site: My Gemini capsule. Selfhosting My Home Server: Self hosting my own open source alternatives to popular software. Specs: I honestly have no idea. It&amp;rsquo;s literally an HP Pavilion from 2009 that I pulled out of a cabinet in my house. I think it has like 4 gigs of ram and 16 gigs of storage.</description>
+      <content>&lt;h1 id=&#34;linux&#34;&gt;Linux&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gitlab.com/aspectsidesxyz/nvspeed&#34;&gt;NvSpeed&lt;/a&gt;: A fast, configurable, and good looking Neovim configuration.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gitlab.com/aspectsidesxyz/dotfiles&#34;&gt;My Dotfiles&lt;/a&gt;: My Linux dotfiles for the Sway Wayland compositor.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;web&#34;&gt;Web&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;gemini://gemini.onefractal.tech&#34;&gt;Gemini Site&lt;/a&gt;: My Gemini capsule.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;selfhosting&#34;&gt;Selfhosting&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;My Home Server: Self hosting my own open source alternatives to popular software.
+&lt;ul&gt;
+&lt;li&gt;Specs: I honestly have no idea. It&amp;rsquo;s literally an HP Pavilion from 2009 that I pulled out of a cabinet in my house. I think it has like 4 gigs of ram and 16 gigs of storage. Honestly a miracle it&amp;rsquo;s survived this long.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
+    <item>
       <title>Pi-Hole: Blocking Ads at the Network Level with Docker</title>
       <link>/posts/pihole/</link>
       <pubDate>Sun, 26 Feb 2023 21:15:48 -0800</pubDate>
