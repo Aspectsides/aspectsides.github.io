@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>lua on Aspect</title>
-    <link>onefractal.tech/tags/lua/</link>
+    <link>/tags/lua/</link>
     <description>Recent content in lua on Aspect</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Feb 2023 16:08:41 -0800</lastBuildDate><atom:link href="onefractal.tech/tags/lua/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Feb 2023 16:08:41 -0800</lastBuildDate><atom:link href="/tags/lua/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Switching to Hilbish</title>
-      <link>onefractal.tech/posts/hilbish/</link>
+      <link>/posts/hilbish/</link>
       <pubDate>Fri, 24 Feb 2023 16:08:41 -0800</pubDate>
       
-      <guid>onefractal.tech/posts/hilbish/</guid>
+      <guid>/posts/hilbish/</guid>
       <description>Intro Hilbish is a shell that is written in Go and scriptable in Lua. It&amp;rsquo;s a relatively new face on the shell block, and I have decided to switch to it over zsh, the shell that I&amp;rsquo;ve been using for a long time. It supports all the basic things you would expect a shell to be able to do, including aliases, adding to the path, etc. In many respects, it fulfills what most of us use our shell for.</description>
       <content>&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;
 &lt;p&gt;Hilbish is a shell that is written in Go and scriptable in Lua. It&amp;rsquo;s a relatively new face on the shell block, and I have decided to switch to it over zsh, the shell that I&amp;rsquo;ve been using for a long time. It supports all the basic things you would expect a shell to be able to do, including aliases, adding to the path, etc. In many respects, it fulfills what most of us use our shell for. However, if you are someone who writes advanced shell scripts in your terminal without a shebang, Hilbish isn&amp;rsquo;t for you. That should mean that Hilbish is for everyone, but alas, we do not live in a perfect world. All of us sane human beings can continue believing in Lua supremacy.&lt;/p&gt;

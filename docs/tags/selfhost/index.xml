@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>selfhost on Aspect</title>
-    <link>onefractal.tech/tags/selfhost/</link>
+    <link>/tags/selfhost/</link>
     <description>Recent content in selfhost on Aspect</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Feb 2023 21:15:48 -0800</lastBuildDate><atom:link href="onefractal.tech/tags/selfhost/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Feb 2023 21:15:48 -0800</lastBuildDate><atom:link href="/tags/selfhost/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Pi-Hole: Blocking Ads at the Network Level with Docker</title>
-      <link>onefractal.tech/posts/pihole/</link>
+      <link>/posts/pihole/</link>
       <pubDate>Sun, 26 Feb 2023 21:15:48 -0800</pubDate>
       
-      <guid>onefractal.tech/posts/pihole/</guid>
+      <guid>/posts/pihole/</guid>
       <description>Introduction If you&amp;rsquo;re tired of seeing ads on your devices while browsing the internet, Pi-Hole might be the solution you&amp;rsquo;re looking for. Pi-Hole is a network-level ad and tracker blocker that blocks ads and trackers before they even reach your device. It works by redirecting DNS requests to a black hole, preventing ads and trackers from loading. In this post, we&amp;rsquo;ll learn how to set up Pi-Hole using Docker.
 What is Docker?</description>
       <content>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;

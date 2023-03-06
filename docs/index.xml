@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Aspect</title>
-    <link>onefractal.tech/</link>
+    <link>/</link>
     <description>Recent content on Aspect</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Feb 2023 21:15:48 -0800</lastBuildDate><atom:link href="onefractal.tech/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Feb 2023 21:15:48 -0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Projects</title>
-      <link>onefractal.tech/projects/</link>
+      <link>/projects/</link>
       <pubDate>Sat, 04 Mar 2023 20:14:36 -0800</pubDate>
       
-      <guid>onefractal.tech/projects/</guid>
+      <guid>/projects/</guid>
       <description>Linux NvSpeed: A fast, configurable, and good looking Neovim configuration. My Dotfiles: My Linux dotfiles for the Sway Wayland compositor. Web Gemini Site: My Gemini capsule. Selfhosting My Home Server: Self hosting my own open source alternatives to popular software. Specs: I honestly have no idea. It&amp;rsquo;s literally an HP Pavilion from 2009 that I pulled out of a cabinet in my house. I think it has like 4 gigs of ram and 16 gigs of storage.</description>
       <content>&lt;h1 id=&#34;linux&#34;&gt;Linux&lt;/h1&gt;
 &lt;ul&gt;
@@ -36,10 +36,10 @@
     
     <item>
       <title>Pi-Hole: Blocking Ads at the Network Level with Docker</title>
-      <link>onefractal.tech/posts/pihole/</link>
+      <link>/posts/pihole/</link>
       <pubDate>Sun, 26 Feb 2023 21:15:48 -0800</pubDate>
       
-      <guid>onefractal.tech/posts/pihole/</guid>
+      <guid>/posts/pihole/</guid>
       <description>Introduction If you&amp;rsquo;re tired of seeing ads on your devices while browsing the internet, Pi-Hole might be the solution you&amp;rsquo;re looking for. Pi-Hole is a network-level ad and tracker blocker that blocks ads and trackers before they even reach your device. It works by redirecting DNS requests to a black hole, preventing ads and trackers from loading. In this post, we&amp;rsquo;ll learn how to set up Pi-Hole using Docker.
 What is Docker?</description>
       <content>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
@@ -72,10 +72,10 @@ What is Docker?</description>
     
     <item>
       <title>Self Hosting a Media Server with Jellyfin</title>
-      <link>onefractal.tech/posts/jellyfin/</link>
+      <link>/posts/jellyfin/</link>
       <pubDate>Sun, 26 Feb 2023 14:00:53 -0800</pubDate>
       
-      <guid>onefractal.tech/posts/jellyfin/</guid>
+      <guid>/posts/jellyfin/</guid>
       <description>Introduction With the rise of streaming services such as Netflix and Hulu, it might seem like owning a physical media collection is a thing of the past. However, for many people, owning and managing their own collection of movies, TV shows, and music is still an important part of their media consumption. If you&amp;rsquo;re one of these people, you might be interested in self-hosting a media server. In this blog post, we&amp;rsquo;ll be discussing Jellyfin, a free and open-source media server that you can use to host your own media collection.</description>
       <content>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;With the rise of streaming services such as Netflix and Hulu, it might seem like owning a physical media collection is a thing of the past. However, for many people, owning and managing their own collection of movies, TV shows, and music is still an important part of their media consumption. If you&amp;rsquo;re one of these people, you might be interested in self-hosting a media server. In this blog post, we&amp;rsquo;ll be discussing Jellyfin, a free and open-source media server that you can use to host your own media collection.&lt;/p&gt;
@@ -122,10 +122,10 @@ What is Docker?</description>
     
     <item>
       <title>Switching to Hilbish</title>
-      <link>onefractal.tech/posts/hilbish/</link>
+      <link>/posts/hilbish/</link>
       <pubDate>Fri, 24 Feb 2023 16:08:41 -0800</pubDate>
       
-      <guid>onefractal.tech/posts/hilbish/</guid>
+      <guid>/posts/hilbish/</guid>
       <description>Intro Hilbish is a shell that is written in Go and scriptable in Lua. It&amp;rsquo;s a relatively new face on the shell block, and I have decided to switch to it over zsh, the shell that I&amp;rsquo;ve been using for a long time. It supports all the basic things you would expect a shell to be able to do, including aliases, adding to the path, etc. In many respects, it fulfills what most of us use our shell for.</description>
       <content>&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;
 &lt;p&gt;Hilbish is a shell that is written in Go and scriptable in Lua. It&amp;rsquo;s a relatively new face on the shell block, and I have decided to switch to it over zsh, the shell that I&amp;rsquo;ve been using for a long time. It supports all the basic things you would expect a shell to be able to do, including aliases, adding to the path, etc. In many respects, it fulfills what most of us use our shell for. However, if you are someone who writes advanced shell scripts in your terminal without a shebang, Hilbish isn&amp;rsquo;t for you. That should mean that Hilbish is for everyone, but alas, we do not live in a perfect world. All of us sane human beings can continue believing in Lua supremacy.&lt;/p&gt;
@@ -160,10 +160,10 @@ What is Docker?</description>
     
     <item>
       <title>Self Hosting Your Own Search Engine</title>
-      <link>onefractal.tech/posts/searx/</link>
+      <link>/posts/searx/</link>
       <pubDate>Fri, 24 Feb 2023 15:44:09 -0800</pubDate>
       
-      <guid>onefractal.tech/posts/searx/</guid>
+      <guid>/posts/searx/</guid>
       <description>You need to host your own search engine. Why? Because Google, Microsoft, even DuckDuckGo, who has a weird relationship with Microsoft, are all tracking you. In fact, Google itself has said that it stores more than an exabyte of your data. That&amp;rsquo;s kinda creepy. Even though most of us have nothing to hide from Google (right?), we could all do with a bit more privacy. For just ten minutes of your time, and a payment of pocket change every month, you&amp;rsquo;ll be able to host your own search engine, along with a bunch of other stuff which I will cover in future guides.</description>
       <content>&lt;p&gt;You need to host your own search engine. Why? Because Google, Microsoft, even DuckDuckGo, who has a &lt;a href=&#34;https://www.msn.com/en-us/news/technology/duckduckgo-in-hot-water-over-hidden-tracking-agreement-with-microsoft/ar-AAXILR1&#34;&gt;weird relationship&lt;/a&gt; with Microsoft, are &lt;em&gt;all&lt;/em&gt; tracking you. In fact, Google itself has said that it stores more than an &lt;em&gt;exabyte&lt;/em&gt; of &lt;em&gt;your&lt;/em&gt; data. That&amp;rsquo;s kinda creepy. Even though most of us have nothing to hide from Google (right?), we could all do with a bit more privacy. For just ten minutes of your time, and a payment of pocket change every month, you&amp;rsquo;ll be able to host your own search engine, along with a bunch of other stuff which I will cover in future guides. The search engine we will be hosting today is a meta search engine called SearXNG, which pulls results from all the major search engines and compiles them into a list of results. Since you are self hosting it, none of your data is being leaked to Google. That is an absolute win in my opinion.&lt;/p&gt;
 &lt;h2 id=&#34;step-1-getting-a-vps&#34;&gt;Step 1: Getting a VPS&lt;/h2&gt;
@@ -189,16 +189,16 @@ What is Docker?</description>
     
     <item>
       <title>Desktop Icons in AwesomeWM</title>
-      <link>onefractal.tech/posts/desktop_icons/</link>
+      <link>/posts/desktop_icons/</link>
       <pubDate>Wed, 22 Feb 2023 16:08:41 -0800</pubDate>
       
-      <guid>onefractal.tech/posts/desktop_icons/</guid>
+      <guid>/posts/desktop_icons/</guid>
       <description>Yes, I know what you&amp;rsquo;re going to say. A Linux user, with desktop icons on his desktop? Blasphemy! And you&amp;rsquo;re right. It is blasphemy. I still do it, though. I mean, it&amp;rsquo;s not like my desktop looks like this.
 That&amp;rsquo;s just wrong. I believe that as long as you put only what you really need on your desktop, it&amp;rsquo;s only slightly blasphemy. This is what my AwesomeWM desktop looks like:</description>
       <content>&lt;p&gt;Yes, I know what you&amp;rsquo;re going to say. A Linux user, with &lt;em&gt;desktop icons&lt;/em&gt; on his desktop? Blasphemy! And you&amp;rsquo;re right. It is blasphemy. I still do it, though. I mean, it&amp;rsquo;s not like my desktop looks like this.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;onefractal.tech/hell.jpg&#34; alt=&#34;hell&#34; title=&#34;Hell.&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/hell.jpg&#34; alt=&#34;hell&#34; title=&#34;Hell.&#34;&gt;&lt;/p&gt;
 &lt;p&gt;That&amp;rsquo;s just wrong. I believe that as long as you put only what you really need on your desktop, it&amp;rsquo;s only slightly blasphemy. This is what my AwesomeWM desktop looks like:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;onefractal.tech/nice.png&#34; alt=&#34;nice&#34; title=&#34;Heaven.&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/nice.png&#34; alt=&#34;nice&#34; title=&#34;Heaven.&#34;&gt;&lt;/p&gt;
 &lt;p&gt;As you can see, despite having &lt;em&gt;gags&lt;/em&gt; desktop icons on the screen, it still looks quite clean. I ran into a few snags while attempting to set up desktop icons in Awesome, so I decided to write a short blog post about the process&lt;/p&gt;
 &lt;p&gt;First things first, there are two file managers that I know of that support desktop icons out of the box, those being Nemo and PCManFM. I use Nemo, and I would use Nemo over PCManFM because it supports GTK3 as opposed to GTK2 and is still being actively maintained. Install Nemo with&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo pacman -S nemo
@@ -225,10 +225,10 @@ end)
     
     <item>
       <title>Setting up Neovim for Editing LaTeX</title>
-      <link>onefractal.tech/posts/notes-1/</link>
+      <link>/posts/notes-1/</link>
       <pubDate>Sat, 28 Jan 2023 12:45:41 -0800</pubDate>
       
-      <guid>onefractal.tech/posts/notes-1/</guid>
+      <guid>/posts/notes-1/</guid>
       <description>This is the first article in a three part series in which I discuss how I write math notes with LaTeX and Neovim.
 Why I Started Using LaTeX One thing I&amp;rsquo;ve always recognized about myself is that I have terrible handwriting. Problem is, I&amp;rsquo;m a math major. I kinda need to be able to read my lecture notes later so I don&amp;rsquo;t fail the class. That&amp;rsquo;s when I discovered this blog post by Gilles Castel.</description>
       <content>&lt;p&gt;This is the first article in a three part series in which I discuss how I write math notes with LaTeX and Neovim.&lt;/p&gt;
@@ -236,7 +236,7 @@ Why I Started Using LaTeX One thing I&amp;rsquo;ve always recognized about mysel
 &lt;p&gt;One thing I&amp;rsquo;ve always recognized about myself is that I have terrible handwriting. Problem is, I&amp;rsquo;m a math major. I kinda need to be able to read my lecture notes later so I don&amp;rsquo;t fail the class. That&amp;rsquo;s when I discovered &lt;a href=&#34;https://castel.dev/post/lecture-notes-1/&#34;&gt;this&lt;/a&gt; blog post by Gilles Castel. It introduced me to the magic of Neovim combined with LaTeX. It took me a while to learn, but after becoming proficient in LaTeX i find that I can take much more readable math notes as well as being able to type them up faster than all my clasmates. They think I&amp;rsquo;m a wizard.&lt;/p&gt;
 &lt;h2 id=&#34;setting-up-neovim&#34;&gt;Setting up Neovim&lt;/h2&gt;
 &lt;p&gt;Here is what my screen looks like when I&amp;rsquo;m writing LaTeX notes:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;onefractal.tech/latex1.png&#34; alt=&#34;Latex&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/latex1.png&#34; alt=&#34;Latex&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The window on the left is Neovim configured with a few plugins that enhance the LaTeX experience. The window on the left is Zathura, my PDF reader that updates whenever I recompile my LaTeX file by saving it.&lt;/p&gt;
 &lt;p&gt;I use my own Neovim configuration written in Lua. You can get it over on my &lt;a href=&#34;https://github.com/aspectsides/archfiles&#34;&gt;Github&lt;/a&gt;. Configuring Neovim from scratch is very time consuming, so if you just want to get started with LaTeX you can steal my config.&lt;/p&gt;
 &lt;h3 id=&#34;plugins&#34;&gt;Plugins&lt;/h3&gt;
@@ -258,10 +258,10 @@ Why I Started Using LaTeX One thing I&amp;rsquo;ve always recognized about mysel
     
     <item>
       <title>Org Roam</title>
-      <link>onefractal.tech/posts/orgroam/</link>
+      <link>/posts/orgroam/</link>
       <pubDate>Mon, 23 Jan 2023 23:59:31 -0800</pubDate>
       
-      <guid>onefractal.tech/posts/orgroam/</guid>
+      <guid>/posts/orgroam/</guid>
       <description>Org Roam; The New best Notetaking Software for the Zettelkasten method Why not Obsidian? or Vimwiki? I have hopped notetaking software more times than I can count. When I first had the need to take notes, I did them in Google Docs and saved them to Google Drive. This was terrible, and I have no idea what by 13 year old self was doing. When I got slightly older and wiser, I discovered Evernote and transitioned over to that.</description>
       <content>&lt;h1 id=&#34;org-roam-the-new-best-notetaking-software-for-the-zettelkasten-method&#34;&gt;Org Roam; The New best Notetaking Software for the Zettelkasten method&lt;/h1&gt;
 &lt;h2 id=&#34;why-not-obsidian-or-vimwiki&#34;&gt;Why not Obsidian? or Vimwiki?&lt;/h2&gt;
@@ -283,10 +283,10 @@ Why I Started Using LaTeX One thing I&amp;rsquo;ve always recognized about mysel
     
     <item>
       <title>About Me</title>
-      <link>onefractal.tech/about/</link>
+      <link>/about/</link>
       <pubDate>Mon, 23 Jan 2023 16:22:46 -0800</pubDate>
       
-      <guid>onefractal.tech/about/</guid>
+      <guid>/about/</guid>
       <description>~$ ./daniel.sh Output: -------------- Position: Student in San Francisco (anything further would be doxxing myself) Languages: Lua, C++, Bash, JavaScript, Python Interests: Linux, Selfhosting, Music, Biking Gitlab: https://gitlab.com/aspectsidesxyz Fediverse: https://tilde.zone/@aspect ~$ ./geek.code GCS/M/MU d- s: a--- L++ E+ W++ M PS PE PGP+ t R+ tv b++ DI+ G e- !h !r Contact me using my Keyoxide, encrypt a message and send it to any of the links there. I&amp;rsquo;m always up to chat!</description>
       <content>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;~$ ./daniel.sh
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
@@ -306,10 +306,10 @@ Why I Started Using LaTeX One thing I&amp;rsquo;ve always recognized about mysel
     
     <item>
       <title>Vimwiki</title>
-      <link>onefractal.tech/posts/vimwiki/</link>
+      <link>/posts/vimwiki/</link>
       <pubDate>Sun, 22 Jan 2023 23:43:35 -0800</pubDate>
       
-      <guid>onefractal.tech/posts/vimwiki/</guid>
+      <guid>/posts/vimwiki/</guid>
       <description>Why Vimwiki is the Best Notetaking Sofware What is Vimwiki? It&amp;rsquo;s a bit difficult to explain Vimwiki, but at its core, Vimwiki is a notetaking plugin for Vim that allows you to make your own personal wiki. It&amp;rsquo;s really easy to organize notes and create links between them. You can do so many things with Vimwiki, and Vimwiki has all but replaced Emacs Org Mode for me, as it is now much easier to organize my notes with Vimwiki than just shove all of my Org files in a directory in my home folder.</description>
       <content>&lt;h1 id=&#34;why-vimwiki-is-the-best-notetaking-sofware&#34;&gt;Why Vimwiki is the Best Notetaking Sofware&lt;/h1&gt;
 &lt;h2 id=&#34;what-is-vimwiki&#34;&gt;What is Vimwiki?&lt;/h2&gt;
@@ -350,10 +350,10 @@ Why I Started Using LaTeX One thing I&amp;rsquo;ve always recognized about mysel
     
     <item>
       <title>Catppuccin</title>
-      <link>onefractal.tech/posts/catppuccin/</link>
+      <link>/posts/catppuccin/</link>
       <pubDate>Sun, 22 Jan 2023 23:20:06 -0800</pubDate>
       
-      <guid>onefractal.tech/posts/catppuccin/</guid>
+      <guid>/posts/catppuccin/</guid>
       <description>Catppuccin: My Favorite Colorscheme Catppuccin is a relatively new colorscheme. Released just about a year ago, Catppuccin has quickly grown to be one of the most popular colorschemes, up there with Gruvbox and Nord, my other two favorite colorschemes that I have used in the past. There are a few things that set Catppuccin apart from the rest, though.
 1. It&amp;rsquo;s colorful. My two favorite colorschemes of all time are Nord and Catppuccin.</description>
       <content>&lt;h1 id=&#34;catppuccin-my-favorite-colorscheme&#34;&gt;Catppuccin: My Favorite Colorscheme&lt;/h1&gt;
@@ -374,20 +374,20 @@ Why I Started Using LaTeX One thing I&amp;rsquo;ve always recognized about mysel
     
     <item>
       <title>Archive</title>
-      <link>onefractal.tech/archives/</link>
+      <link>/archives/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>onefractal.tech/archives/</guid>
+      <guid>/archives/</guid>
       <description>archives</description>
       <content></content>
     </item>
     
     <item>
       <title>Search</title>
-      <link>onefractal.tech/search/</link>
+      <link>/search/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>onefractal.tech/search/</guid>
+      <guid>/search/</guid>
       <description>search</description>
       <content></content>
     </item>

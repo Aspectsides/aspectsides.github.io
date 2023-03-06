@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>homelab on Aspect</title>
-    <link>onefractal.tech/tags/homelab/</link>
+    <link>/tags/homelab/</link>
     <description>Recent content in homelab on Aspect</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Feb 2023 14:00:53 -0800</lastBuildDate><atom:link href="onefractal.tech/tags/homelab/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Feb 2023 14:00:53 -0800</lastBuildDate><atom:link href="/tags/homelab/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Self Hosting a Media Server with Jellyfin</title>
-      <link>onefractal.tech/posts/jellyfin/</link>
+      <link>/posts/jellyfin/</link>
       <pubDate>Sun, 26 Feb 2023 14:00:53 -0800</pubDate>
       
-      <guid>onefractal.tech/posts/jellyfin/</guid>
+      <guid>/posts/jellyfin/</guid>
       <description>Introduction With the rise of streaming services such as Netflix and Hulu, it might seem like owning a physical media collection is a thing of the past. However, for many people, owning and managing their own collection of movies, TV shows, and music is still an important part of their media consumption. If you&amp;rsquo;re one of these people, you might be interested in self-hosting a media server. In this blog post, we&amp;rsquo;ll be discussing Jellyfin, a free and open-source media server that you can use to host your own media collection.</description>
       <content>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;With the rise of streaming services such as Netflix and Hulu, it might seem like owning a physical media collection is a thing of the past. However, for many people, owning and managing their own collection of movies, TV shows, and music is still an important part of their media consumption. If you&amp;rsquo;re one of these people, you might be interested in self-hosting a media server. In this blog post, we&amp;rsquo;ll be discussing Jellyfin, a free and open-source media server that you can use to host your own media collection.&lt;/p&gt;

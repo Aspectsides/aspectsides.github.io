@@ -2,147 +2,147 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Aspect</title>
-    <link>onefractal.tech/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on Aspect</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Feb 2023 21:15:48 -0800</lastBuildDate><atom:link href="onefractal.tech/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Feb 2023 21:15:48 -0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>pihole</title>
-      <link>onefractal.tech/tags/pihole/</link>
+      <link>/tags/pihole/</link>
       <pubDate>Sun, 26 Feb 2023 21:15:48 -0800</pubDate>
       
-      <guid>onefractal.tech/tags/pihole/</guid>
+      <guid>/tags/pihole/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
       <title>selfhost</title>
-      <link>onefractal.tech/tags/selfhost/</link>
+      <link>/tags/selfhost/</link>
       <pubDate>Sun, 26 Feb 2023 21:15:48 -0800</pubDate>
       
-      <guid>onefractal.tech/tags/selfhost/</guid>
+      <guid>/tags/selfhost/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
       <title>homelab</title>
-      <link>onefractal.tech/tags/homelab/</link>
+      <link>/tags/homelab/</link>
       <pubDate>Sun, 26 Feb 2023 14:00:53 -0800</pubDate>
       
-      <guid>onefractal.tech/tags/homelab/</guid>
+      <guid>/tags/homelab/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
       <title>selfhosting</title>
-      <link>onefractal.tech/tags/selfhosting/</link>
+      <link>/tags/selfhosting/</link>
       <pubDate>Sun, 26 Feb 2023 14:00:53 -0800</pubDate>
       
-      <guid>onefractal.tech/tags/selfhosting/</guid>
+      <guid>/tags/selfhosting/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
       <title>linux</title>
-      <link>onefractal.tech/tags/linux/</link>
+      <link>/tags/linux/</link>
       <pubDate>Fri, 24 Feb 2023 16:08:41 -0800</pubDate>
       
-      <guid>onefractal.tech/tags/linux/</guid>
+      <guid>/tags/linux/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
       <title>lua</title>
-      <link>onefractal.tech/tags/lua/</link>
+      <link>/tags/lua/</link>
       <pubDate>Fri, 24 Feb 2023 16:08:41 -0800</pubDate>
       
-      <guid>onefractal.tech/tags/lua/</guid>
+      <guid>/tags/lua/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
       <title>shell</title>
-      <link>onefractal.tech/tags/shell/</link>
+      <link>/tags/shell/</link>
       <pubDate>Fri, 24 Feb 2023 16:08:41 -0800</pubDate>
       
-      <guid>onefractal.tech/tags/shell/</guid>
+      <guid>/tags/shell/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
       <title>terminal</title>
-      <link>onefractal.tech/tags/terminal/</link>
+      <link>/tags/terminal/</link>
       <pubDate>Fri, 24 Feb 2023 16:08:41 -0800</pubDate>
       
-      <guid>onefractal.tech/tags/terminal/</guid>
+      <guid>/tags/terminal/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
       <title>docker</title>
-      <link>onefractal.tech/tags/docker/</link>
+      <link>/tags/docker/</link>
       <pubDate>Fri, 24 Feb 2023 15:44:09 -0800</pubDate>
       
-      <guid>onefractal.tech/tags/docker/</guid>
+      <guid>/tags/docker/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
       <title>privacy</title>
-      <link>onefractal.tech/tags/privacy/</link>
+      <link>/tags/privacy/</link>
       <pubDate>Fri, 24 Feb 2023 15:44:09 -0800</pubDate>
       
-      <guid>onefractal.tech/tags/privacy/</guid>
+      <guid>/tags/privacy/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
       <title>searx</title>
-      <link>onefractal.tech/tags/searx/</link>
+      <link>/tags/searx/</link>
       <pubDate>Fri, 24 Feb 2023 15:44:09 -0800</pubDate>
       
-      <guid>onefractal.tech/tags/searx/</guid>
+      <guid>/tags/searx/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
       <title>ricing</title>
-      <link>onefractal.tech/tags/ricing/</link>
+      <link>/tags/ricing/</link>
       <pubDate>Wed, 22 Feb 2023 16:08:41 -0800</pubDate>
       
-      <guid>onefractal.tech/tags/ricing/</guid>
+      <guid>/tags/ricing/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
       <title>wm</title>
-      <link>onefractal.tech/tags/wm/</link>
+      <link>/tags/wm/</link>
       <pubDate>Wed, 22 Feb 2023 16:08:41 -0800</pubDate>
       
-      <guid>onefractal.tech/tags/wm/</guid>
+      <guid>/tags/wm/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
       <title>catppuccin</title>
-      <link>onefractal.tech/tags/catppuccin/</link>
+      <link>/tags/catppuccin/</link>
       <pubDate>Sun, 22 Jan 2023 23:20:06 -0800</pubDate>
       
-      <guid>onefractal.tech/tags/catppuccin/</guid>
+      <guid>/tags/catppuccin/</guid>
       <description></description>
       <content></content>
     </item>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on Aspect</title>
-    <link>onefractal.tech/categories/linux/</link>
+    <link>/categories/linux/</link>
     <description>Recent content in Linux on Aspect</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 22 Jan 2023 23:20:06 -0800</lastBuildDate><atom:link href="onefractal.tech/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Jan 2023 23:20:06 -0800</lastBuildDate><atom:link href="/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Catppuccin</title>
-      <link>onefractal.tech/posts/catppuccin/</link>
+      <link>/posts/catppuccin/</link>
       <pubDate>Sun, 22 Jan 2023 23:20:06 -0800</pubDate>
       
-      <guid>onefractal.tech/posts/catppuccin/</guid>
+      <guid>/posts/catppuccin/</guid>
       <description>Catppuccin: My Favorite Colorscheme Catppuccin is a relatively new colorscheme. Released just about a year ago, Catppuccin has quickly grown to be one of the most popular colorschemes, up there with Gruvbox and Nord, my other two favorite colorschemes that I have used in the past. There are a few things that set Catppuccin apart from the rest, though.
 1. It&amp;rsquo;s colorful. My two favorite colorschemes of all time are Nord and Catppuccin.</description>
       <content>&lt;h1 id=&#34;catppuccin-my-favorite-colorscheme&#34;&gt;Catppuccin: My Favorite Colorscheme&lt;/h1&gt;
