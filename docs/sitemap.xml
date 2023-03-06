@@ -2,101 +2,101 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/projects/</loc>
+    <loc>https://onefractal.tech/projects/</loc>
     <lastmod>2023-03-04T20:14:36-08:00</lastmod>
   </url><url>
-    <loc>/</loc>
+    <loc>https://onefractal.tech/</loc>
     <lastmod>2023-02-26T21:15:48-08:00</lastmod>
   </url><url>
-    <loc>/posts/pihole/</loc>
+    <loc>https://onefractal.tech/posts/pihole/</loc>
     <lastmod>2023-02-26T21:15:48-08:00</lastmod>
   </url><url>
-    <loc>/tags/pihole/</loc>
+    <loc>https://onefractal.tech/tags/pihole/</loc>
     <lastmod>2023-02-26T21:15:48-08:00</lastmod>
   </url><url>
-    <loc>/posts/</loc>
+    <loc>https://onefractal.tech/posts/</loc>
     <lastmod>2023-02-26T21:15:48-08:00</lastmod>
   </url><url>
-    <loc>/tags/selfhost/</loc>
+    <loc>https://onefractal.tech/tags/selfhost/</loc>
     <lastmod>2023-02-26T21:15:48-08:00</lastmod>
   </url><url>
-    <loc>/tags/</loc>
+    <loc>https://onefractal.tech/tags/</loc>
     <lastmod>2023-02-26T21:15:48-08:00</lastmod>
   </url><url>
-    <loc>/tags/homelab/</loc>
+    <loc>https://onefractal.tech/tags/homelab/</loc>
     <lastmod>2023-02-26T14:00:53-08:00</lastmod>
   </url><url>
-    <loc>/posts/jellyfin/</loc>
+    <loc>https://onefractal.tech/posts/jellyfin/</loc>
     <lastmod>2023-02-26T14:00:53-08:00</lastmod>
   </url><url>
-    <loc>/tags/selfhosting/</loc>
+    <loc>https://onefractal.tech/tags/selfhosting/</loc>
     <lastmod>2023-02-26T14:00:53-08:00</lastmod>
   </url><url>
-    <loc>/tags/linux/</loc>
+    <loc>https://onefractal.tech/tags/linux/</loc>
     <lastmod>2023-02-24T16:08:41-08:00</lastmod>
   </url><url>
-    <loc>/tags/lua/</loc>
+    <loc>https://onefractal.tech/tags/lua/</loc>
     <lastmod>2023-02-24T16:08:41-08:00</lastmod>
   </url><url>
-    <loc>/tags/shell/</loc>
+    <loc>https://onefractal.tech/tags/shell/</loc>
     <lastmod>2023-02-24T16:08:41-08:00</lastmod>
   </url><url>
-    <loc>/posts/hilbish/</loc>
+    <loc>https://onefractal.tech/posts/hilbish/</loc>
     <lastmod>2023-02-24T16:08:41-08:00</lastmod>
   </url><url>
-    <loc>/tags/terminal/</loc>
+    <loc>https://onefractal.tech/tags/terminal/</loc>
     <lastmod>2023-02-24T16:08:41-08:00</lastmod>
   </url><url>
-    <loc>/tags/docker/</loc>
+    <loc>https://onefractal.tech/tags/docker/</loc>
     <lastmod>2023-02-24T15:44:09-08:00</lastmod>
   </url><url>
-    <loc>/tags/privacy/</loc>
+    <loc>https://onefractal.tech/tags/privacy/</loc>
     <lastmod>2023-02-24T15:44:09-08:00</lastmod>
   </url><url>
-    <loc>/tags/searx/</loc>
+    <loc>https://onefractal.tech/tags/searx/</loc>
     <lastmod>2023-02-24T15:44:09-08:00</lastmod>
   </url><url>
-    <loc>/posts/searx/</loc>
+    <loc>https://onefractal.tech/posts/searx/</loc>
     <lastmod>2023-02-24T15:44:09-08:00</lastmod>
   </url><url>
-    <loc>/posts/desktop_icons/</loc>
+    <loc>https://onefractal.tech/posts/desktop_icons/</loc>
     <lastmod>2023-02-22T16:08:41-08:00</lastmod>
   </url><url>
-    <loc>/tags/ricing/</loc>
+    <loc>https://onefractal.tech/tags/ricing/</loc>
     <lastmod>2023-02-22T16:08:41-08:00</lastmod>
   </url><url>
-    <loc>/tags/wm/</loc>
+    <loc>https://onefractal.tech/tags/wm/</loc>
     <lastmod>2023-02-22T16:08:41-08:00</lastmod>
   </url><url>
-    <loc>/posts/notes-1/</loc>
+    <loc>https://onefractal.tech/posts/notes-1/</loc>
     <lastmod>2023-01-28T12:45:41-08:00</lastmod>
   </url><url>
-    <loc>/posts/orgroam/</loc>
+    <loc>https://onefractal.tech/posts/orgroam/</loc>
     <lastmod>2023-01-23T23:59:31-08:00</lastmod>
   </url><url>
-    <loc>/about/</loc>
+    <loc>https://onefractal.tech/about/</loc>
     <lastmod>2023-01-23T16:22:46-08:00</lastmod>
   </url><url>
-    <loc>/posts/vimwiki/</loc>
+    <loc>https://onefractal.tech/posts/vimwiki/</loc>
     <lastmod>2023-01-22T23:43:35-08:00</lastmod>
   </url><url>
-    <loc>/categories/</loc>
+    <loc>https://onefractal.tech/categories/</loc>
     <lastmod>2023-01-22T23:20:06-08:00</lastmod>
   </url><url>
-    <loc>/tags/catppuccin/</loc>
+    <loc>https://onefractal.tech/tags/catppuccin/</loc>
     <lastmod>2023-01-22T23:20:06-08:00</lastmod>
   </url><url>
-    <loc>/posts/catppuccin/</loc>
+    <loc>https://onefractal.tech/posts/catppuccin/</loc>
     <lastmod>2023-01-22T23:20:06-08:00</lastmod>
   </url><url>
-    <loc>/categories/linux/</loc>
+    <loc>https://onefractal.tech/categories/linux/</loc>
     <lastmod>2023-01-22T23:20:06-08:00</lastmod>
   </url><url>
-    <loc>/categories/ricing/</loc>
+    <loc>https://onefractal.tech/categories/ricing/</loc>
     <lastmod>2023-01-22T23:20:06-08:00</lastmod>
   </url><url>
-    <loc>/archives/</loc>
+    <loc>https://onefractal.tech/archives/</loc>
   </url><url>
-    <loc>/search/</loc>
+    <loc>https://onefractal.tech/search/</loc>
   </url>
 </urlset>
