@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>wm on Aspect</title>
-    <link>/tags/wm/</link>
+    <link>onefractal.tech/tags/wm/</link>
     <description>Recent content in wm on Aspect</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Feb 2023 16:08:41 -0800</lastBuildDate><atom:link href="/tags/wm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Feb 2023 16:08:41 -0800</lastBuildDate><atom:link href="onefractal.tech/tags/wm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Desktop Icons in AwesomeWM</title>
-      <link>/posts/desktop_icons/</link>
+      <link>onefractal.tech/posts/desktop_icons/</link>
       <pubDate>Wed, 22 Feb 2023 16:08:41 -0800</pubDate>
       
-      <guid>/posts/desktop_icons/</guid>
+      <guid>onefractal.tech/posts/desktop_icons/</guid>
       <description>Yes, I know what you&amp;rsquo;re going to say. A Linux user, with desktop icons on his desktop? Blasphemy! And you&amp;rsquo;re right. It is blasphemy. I still do it, though. I mean, it&amp;rsquo;s not like my desktop looks like this.
 That&amp;rsquo;s just wrong. I believe that as long as you put only what you really need on your desktop, it&amp;rsquo;s only slightly blasphemy. This is what my AwesomeWM desktop looks like:</description>
       <content>&lt;p&gt;Yes, I know what you&amp;rsquo;re going to say. A Linux user, with &lt;em&gt;desktop icons&lt;/em&gt; on his desktop? Blasphemy! And you&amp;rsquo;re right. It is blasphemy. I still do it, though. I mean, it&amp;rsquo;s not like my desktop looks like this.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/hell.jpg&#34; alt=&#34;hell&#34; title=&#34;Hell.&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;onefractal.tech/hell.jpg&#34; alt=&#34;hell&#34; title=&#34;Hell.&#34;&gt;&lt;/p&gt;
 &lt;p&gt;That&amp;rsquo;s just wrong. I believe that as long as you put only what you really need on your desktop, it&amp;rsquo;s only slightly blasphemy. This is what my AwesomeWM desktop looks like:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/nice.png&#34; alt=&#34;nice&#34; title=&#34;Heaven.&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;onefractal.tech/nice.png&#34; alt=&#34;nice&#34; title=&#34;Heaven.&#34;&gt;&lt;/p&gt;
 &lt;p&gt;As you can see, despite having &lt;em&gt;gags&lt;/em&gt; desktop icons on the screen, it still looks quite clean. I ran into a few snags while attempting to set up desktop icons in Awesome, so I decided to write a short blog post about the process&lt;/p&gt;
 &lt;p&gt;First things first, there are two file managers that I know of that support desktop icons out of the box, those being Nemo and PCManFM. I use Nemo, and I would use Nemo over PCManFM because it supports GTK3 as opposed to GTK2 and is still being actively maintained. Install Nemo with&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo pacman -S nemo
