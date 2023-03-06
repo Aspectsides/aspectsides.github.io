@@ -18,9 +18,6 @@ params:
   # center theme with default width
   centerTheme: true
 
-author:
-  name = "Daniel Xu"
-
 languages:
   en:
     languageName: English
