@@ -6,16 +6,18 @@
     <description>Recent content in wm on Aspect</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Feb 2023 16:08:41 -0800</lastBuildDate><atom:link href="/tags/wm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Feb 2023 16:08:41 -0800</lastBuildDate>
+    
+	<atom:link href="/tags/wm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Desktop Icons in AwesomeWM</title>
       <link>/posts/desktop_icons/</link>
       <pubDate>Wed, 22 Feb 2023 16:08:41 -0800</pubDate>
       
       <guid>/posts/desktop_icons/</guid>
-      <description>Yes, I know what you&amp;rsquo;re going to say. A Linux user, with desktop icons on his desktop? Blasphemy! And you&amp;rsquo;re right. It is blasphemy. I still do it, though. I mean, it&amp;rsquo;s not like my desktop looks like this.
-That&amp;rsquo;s just wrong. I believe that as long as you put only what you really need on your desktop, it&amp;rsquo;s only slightly blasphemy. This is what my AwesomeWM desktop looks like:</description>
-      <content>&lt;p&gt;Yes, I know what you&amp;rsquo;re going to say. A Linux user, with &lt;em&gt;desktop icons&lt;/em&gt; on his desktop? Blasphemy! And you&amp;rsquo;re right. It is blasphemy. I still do it, though. I mean, it&amp;rsquo;s not like my desktop looks like this.&lt;/p&gt;
+      <description>&lt;p&gt;Yes, I know what you&amp;rsquo;re going to say. A Linux user, with &lt;em&gt;desktop icons&lt;/em&gt; on his desktop? Blasphemy! And you&amp;rsquo;re right. It is blasphemy. I still do it, though. I mean, it&amp;rsquo;s not like my desktop looks like this.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/hell.jpg&#34; alt=&#34;hell&#34; title=&#34;Hell.&#34;&gt;&lt;/p&gt;
 &lt;p&gt;That&amp;rsquo;s just wrong. I believe that as long as you put only what you really need on your desktop, it&amp;rsquo;s only slightly blasphemy. This is what my AwesomeWM desktop looks like:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/nice.png&#34; alt=&#34;nice&#34; title=&#34;Heaven.&#34;&gt;&lt;/p&gt;
@@ -40,8 +42,9 @@ end)
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;One downside (well, not really a downside for me) is that Nemo has it&amp;rsquo;s own root menu, which means you won&amp;rsquo;t be able to use your own root menu. This is fine by me because my root menu is still Awesome&amp;rsquo;s default root menu, and Nemo&amp;rsquo;s root menu is actually pretty good, integrating well with Nemo itself.&lt;/p&gt;
 &lt;p&gt;I think desktop icons are really comfy, and add a little bit of uniqueness to a rice. Hopefully this post is easy enough to follow so that you can get started adding your own desktop icons.&lt;/p&gt;
-</content>
+</description> 
     </item>
     
   </channel>
 </rss>
+

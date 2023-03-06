@@ -6,15 +6,18 @@
     <description>Recent content in homelab on Aspect</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Feb 2023 14:00:53 -0800</lastBuildDate><atom:link href="/tags/homelab/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Feb 2023 14:00:53 -0800</lastBuildDate>
+    
+	<atom:link href="/tags/homelab/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Self Hosting a Media Server with Jellyfin</title>
       <link>/posts/jellyfin/</link>
       <pubDate>Sun, 26 Feb 2023 14:00:53 -0800</pubDate>
       
       <guid>/posts/jellyfin/</guid>
-      <description>Introduction With the rise of streaming services such as Netflix and Hulu, it might seem like owning a physical media collection is a thing of the past. However, for many people, owning and managing their own collection of movies, TV shows, and music is still an important part of their media consumption. If you&amp;rsquo;re one of these people, you might be interested in self-hosting a media server. In this blog post, we&amp;rsquo;ll be discussing Jellyfin, a free and open-source media server that you can use to host your own media collection.</description>
-      <content>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;With the rise of streaming services such as Netflix and Hulu, it might seem like owning a physical media collection is a thing of the past. However, for many people, owning and managing their own collection of movies, TV shows, and music is still an important part of their media consumption. If you&amp;rsquo;re one of these people, you might be interested in self-hosting a media server. In this blog post, we&amp;rsquo;ll be discussing Jellyfin, a free and open-source media server that you can use to host your own media collection.&lt;/p&gt;
 &lt;h2 id=&#34;what-is-jellyfin&#34;&gt;What is Jellyfin?&lt;/h2&gt;
 &lt;p&gt;Jellyfin is a media server that allows you to stream your own media collection to a variety of devices. It is free and open-source, which means that anyone can download and use it without paying anything. One of the great things about Jellyfin is that it is completely customizable. You can choose which media formats are supported, which devices can access your server, and even customize the look and feel of the user interface.&lt;/p&gt;
@@ -54,8 +57,9 @@
 &lt;p&gt;Once you&amp;rsquo;ve set up Jellyfin, you can start streaming your media collection to your devices. You can access your media server through a web browser by going to the aforementioned url, or by downloading one of the many Jellyfin apps that are available for different devices. With Jellyfin, you can stream your media to a variety of devices, including smartphones, tablets, smart TVs, and even gaming consoles. You can also customize the user interface to make it look and feel the way you want it to.&lt;/p&gt;
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;Self-hosting a media server with Jellyfin is a great way to take control of your media collection. With Jellyfin, you can stream your media to a variety of devices, and customize the server settings to fit your needs. If you&amp;rsquo;re interested in self-hosting a media server, Jellyfin is definitely worth checking out. Best of all, it&amp;rsquo;s completely free and open-source, so you can try it out without any financial commitment.&lt;/p&gt;
-</content>
+</description> 
     </item>
     
   </channel>
 </rss>
+

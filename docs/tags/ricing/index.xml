@@ -6,16 +6,18 @@
     <description>Recent content in ricing on Aspect</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Feb 2023 16:08:41 -0800</lastBuildDate><atom:link href="/tags/ricing/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Feb 2023 16:08:41 -0800</lastBuildDate>
+    
+	<atom:link href="/tags/ricing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Desktop Icons in AwesomeWM</title>
       <link>/posts/desktop_icons/</link>
       <pubDate>Wed, 22 Feb 2023 16:08:41 -0800</pubDate>
       
       <guid>/posts/desktop_icons/</guid>
-      <description>Yes, I know what you&amp;rsquo;re going to say. A Linux user, with desktop icons on his desktop? Blasphemy! And you&amp;rsquo;re right. It is blasphemy. I still do it, though. I mean, it&amp;rsquo;s not like my desktop looks like this.
-That&amp;rsquo;s just wrong. I believe that as long as you put only what you really need on your desktop, it&amp;rsquo;s only slightly blasphemy. This is what my AwesomeWM desktop looks like:</description>
-      <content>&lt;p&gt;Yes, I know what you&amp;rsquo;re going to say. A Linux user, with &lt;em&gt;desktop icons&lt;/em&gt; on his desktop? Blasphemy! And you&amp;rsquo;re right. It is blasphemy. I still do it, though. I mean, it&amp;rsquo;s not like my desktop looks like this.&lt;/p&gt;
+      <description>&lt;p&gt;Yes, I know what you&amp;rsquo;re going to say. A Linux user, with &lt;em&gt;desktop icons&lt;/em&gt; on his desktop? Blasphemy! And you&amp;rsquo;re right. It is blasphemy. I still do it, though. I mean, it&amp;rsquo;s not like my desktop looks like this.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/hell.jpg&#34; alt=&#34;hell&#34; title=&#34;Hell.&#34;&gt;&lt;/p&gt;
 &lt;p&gt;That&amp;rsquo;s just wrong. I believe that as long as you put only what you really need on your desktop, it&amp;rsquo;s only slightly blasphemy. This is what my AwesomeWM desktop looks like:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/nice.png&#34; alt=&#34;nice&#34; title=&#34;Heaven.&#34;&gt;&lt;/p&gt;
@@ -40,7 +42,7 @@ end)
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;One downside (well, not really a downside for me) is that Nemo has it&amp;rsquo;s own root menu, which means you won&amp;rsquo;t be able to use your own root menu. This is fine by me because my root menu is still Awesome&amp;rsquo;s default root menu, and Nemo&amp;rsquo;s root menu is actually pretty good, integrating well with Nemo itself.&lt;/p&gt;
 &lt;p&gt;I think desktop icons are really comfy, and add a little bit of uniqueness to a rice. Hopefully this post is easy enough to follow so that you can get started adding your own desktop icons.&lt;/p&gt;
-</content>
+</description> 
     </item>
     
     <item>
@@ -49,9 +51,7 @@ end)
       <pubDate>Sun, 22 Jan 2023 23:20:06 -0800</pubDate>
       
       <guid>/posts/catppuccin/</guid>
-      <description>Catppuccin: My Favorite Colorscheme Catppuccin is a relatively new colorscheme. Released just about a year ago, Catppuccin has quickly grown to be one of the most popular colorschemes, up there with Gruvbox and Nord, my other two favorite colorschemes that I have used in the past. There are a few things that set Catppuccin apart from the rest, though.
-1. It&amp;rsquo;s colorful. My two favorite colorschemes of all time are Nord and Catppuccin.</description>
-      <content>&lt;h1 id=&#34;catppuccin-my-favorite-colorscheme&#34;&gt;Catppuccin: My Favorite Colorscheme&lt;/h1&gt;
+      <description>&lt;h1 id=&#34;catppuccin-my-favorite-colorscheme&#34;&gt;Catppuccin: My Favorite Colorscheme&lt;/h1&gt;
 &lt;p&gt;Catppuccin is a relatively new colorscheme. Released just about a year ago, Catppuccin has quickly grown to be one of the most popular colorschemes, up there with Gruvbox and Nord, my other two favorite colorschemes that I have used in the past. There are a few things that set Catppuccin apart from the rest, though.&lt;/p&gt;
 &lt;h2 id=&#34;1-its-colorful&#34;&gt;1. It&amp;rsquo;s colorful.&lt;/h2&gt;
 &lt;p&gt;My two favorite colorschemes of all time are Nord and Catppuccin. What gives Catppuccin the edge over Nord in my opinion, though, is that it&amp;rsquo;s very colorful. In fact, that&amp;rsquo;s one of Catppuccin&amp;rsquo;s core values; color is better than no color. Or something like that. Nord, on the other hand, is relatively colorless. I absolutely love Nord&amp;rsquo;s background color, but the other colors in the pallete just don&amp;rsquo;t pop out to me as much. After about a year of daily driving a Nord machine, I came to realize; Nord is slightly depressing. It&amp;rsquo;s still a great colorscheme, it just lacks in color. If Catppuccin didn&amp;rsquo;t have as much color as it does, I would use Nord.&lt;/p&gt;
@@ -64,8 +64,9 @@ end)
 &lt;p&gt;To add your own personal pop to Catppuccin, you can choose from one of 14 accent colors, ranging from rosewater to teal to blue to muave to lavender. My favorite accent color is the basic blue, though lavender is extremely nice as well.&lt;/p&gt;
 &lt;h2 id=&#34;5-a-very-active-community&#34;&gt;5. A very active community.&lt;/h2&gt;
 &lt;p&gt;Unlike other colorschemes, Catppuccin&amp;rsquo;s community is still very much active and is spitting out new ports. It&amp;rsquo;s really easy to contribute to Catppuccin too, all you need to do is make a pull request on their Github.&lt;/p&gt;
-</content>
+</description> 
     </item>
     
   </channel>
 </rss>
+
